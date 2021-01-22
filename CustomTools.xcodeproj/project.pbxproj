@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FE1E9343F99AFC8F9B57B36 /* Pods_CustomTools_CustomToolsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0318E2536161C9E6B8B8D981 /* Pods_CustomTools_CustomToolsUITests.framework */; };
+		7BAC2CCD004FB58B206BBF80 /* Pods_CustomToolsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17483473EEB2ECD8A921FA94 /* Pods_CustomToolsTests.framework */; };
 		7E92057825B9807F0074A056 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E92057725B9807F0074A056 /* AppDelegate.m */; };
 		7E92057B25B9807F0074A056 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E92057A25B9807F0074A056 /* SceneDelegate.m */; };
 		7E92057E25B9807F0074A056 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E92057D25B9807F0074A056 /* ViewController.m */; };
@@ -45,6 +47,7 @@
 		7E92067B25B982090074A056 /* UIFont+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E92065C25B982090074A056 /* UIFont+Custom.m */; };
 		7E92067C25B982090074A056 /* UIButton+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E92065D25B982090074A056 /* UIButton+Custom.m */; };
 		7E92067D25B982090074A056 /* NSObject+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E92065E25B982090074A056 /* NSObject+Custom.m */; };
+		EB88581688BBDB2E9FEADA06 /* Pods_CustomTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C333F621EA88C6789AB4DE28 /* Pods_CustomTools.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0318E2536161C9E6B8B8D981 /* Pods_CustomTools_CustomToolsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomTools_CustomToolsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17483473EEB2ECD8A921FA94 /* Pods_CustomToolsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomToolsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40C644F5FE39700A19D25988 /* Pods-CustomToolsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomToolsTests.release.xcconfig"; path = "Target Support Files/Pods-CustomToolsTests/Pods-CustomToolsTests.release.xcconfig"; sourceTree = "<group>"; };
+		52284AE50B2FFA5FE8354FFE /* Pods-CustomTools-CustomToolsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTools-CustomToolsUITests.debug.xcconfig"; path = "Target Support Files/Pods-CustomTools-CustomToolsUITests/Pods-CustomTools-CustomToolsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E92057325B9807F0074A056 /* CustomTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E92057625B9807F0074A056 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7E92057725B9807F0074A056 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -145,6 +152,11 @@
 		7E92065E25B982090074A056 /* NSObject+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Custom.m"; sourceTree = "<group>"; };
 		7E92065F25B982090074A056 /* UILabel+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Custom.h"; sourceTree = "<group>"; };
 		7E92066025B982090074A056 /* UIImage+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Custom.h"; sourceTree = "<group>"; };
+		B98FAE62A98C4A8B8C639147 /* Pods-CustomTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTools.release.xcconfig"; path = "Target Support Files/Pods-CustomTools/Pods-CustomTools.release.xcconfig"; sourceTree = "<group>"; };
+		C333F621EA88C6789AB4DE28 /* Pods_CustomTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE8C8321230F7BDF3B1C0692 /* Pods-CustomToolsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomToolsTests.debug.xcconfig"; path = "Target Support Files/Pods-CustomToolsTests/Pods-CustomToolsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EBFD420297CF584E59658E2B /* Pods-CustomTools-CustomToolsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTools-CustomToolsUITests.release.xcconfig"; path = "Target Support Files/Pods-CustomTools-CustomToolsUITests/Pods-CustomTools-CustomToolsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F576CDFE2E7639C9D282EB84 /* Pods-CustomTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTools.debug.xcconfig"; path = "Target Support Files/Pods-CustomTools/Pods-CustomTools.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB88581688BBDB2E9FEADA06 /* Pods_CustomTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BAC2CCD004FB58B206BBF80 /* Pods_CustomToolsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,12 +180,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FE1E9343F99AFC8F9B57B36 /* Pods_CustomTools_CustomToolsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3068E0EFA9638573623A5EDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C333F621EA88C6789AB4DE28 /* Pods_CustomTools.framework */,
+				0318E2536161C9E6B8B8D981 /* Pods_CustomTools_CustomToolsUITests.framework */,
+				17483473EEB2ECD8A921FA94 /* Pods_CustomToolsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7E92056A25B9807E0074A056 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +204,8 @@
 				7E92059125B980830074A056 /* CustomToolsTests */,
 				7E92059C25B980840074A056 /* CustomToolsUITests */,
 				7E92057425B9807F0074A056 /* Products */,
+				82B60165061B325EB599EED2 /* Pods */,
+				3068E0EFA9638573623A5EDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -245,15 +272,15 @@
 		7E92061D25B982090074A056 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7E92061E25B982090074A056 /* CustomImagePreviewViewController.h */,
-				7E92061F25B982090074A056 /* CustomCameraViewController.m */,
-				7E92062025B982090074A056 /* BaseViewController.m */,
-				7E92062125B982090074A056 /* CustomVideoPlayerViewController.m */,
-				7E92062225B982090074A056 /* CustomNavigationViewController.h */,
-				7E92062325B982090074A056 /* CustomImagePreviewViewController.m */,
 				7E92062425B982090074A056 /* CustomCameraViewController.h */,
-				7E92062525B982090074A056 /* CustomVideoPlayerViewController.h */,
+				7E92061F25B982090074A056 /* CustomCameraViewController.m */,
 				7E92062625B982090074A056 /* BaseViewController.h */,
+				7E92062025B982090074A056 /* BaseViewController.m */,
+				7E92062525B982090074A056 /* CustomVideoPlayerViewController.h */,
+				7E92062125B982090074A056 /* CustomVideoPlayerViewController.m */,
+				7E92061E25B982090074A056 /* CustomImagePreviewViewController.h */,
+				7E92062325B982090074A056 /* CustomImagePreviewViewController.m */,
+				7E92062225B982090074A056 /* CustomNavigationViewController.h */,
 				7E92062725B982090074A056 /* CustomNavigationViewController.m */,
 			);
 			path = Controller;
@@ -262,20 +289,20 @@
 		7E92062825B982090074A056 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7E92062925B982090074A056 /* CustomActionSheet.h */,
-				7E92062A25B982090074A056 /* CustomGuideView.m */,
 				7E92062B25B982090074A056 /* CustomProgressHUD.h */,
-				7E92062C25B982090074A056 /* CustomResultContentView.m */,
+				7E92063325B982090074A056 /* CustomProgressHUD.m */,
+				7E92063625B982090074A056 /* CustomSheetContentView.h */,
 				7E92062D25B982090074A056 /* CustomSheetContentView.m */,
-				7E92062E25B982090074A056 /* CustomTextView.m */,
+				7E92063425B982090074A056 /* CustomAlertView.h */,
 				7E92062F25B982090074A056 /* CustomAlertView.m */,
 				7E92063025B982090074A056 /* CustomGuideView.h */,
+				7E92062A25B982090074A056 /* CustomGuideView.m */,
+				7E92062925B982090074A056 /* CustomActionSheet.h */,
 				7E92063125B982090074A056 /* CustomActionSheet.m */,
 				7E92063225B982090074A056 /* CustomResultContentView.h */,
-				7E92063325B982090074A056 /* CustomProgressHUD.m */,
-				7E92063425B982090074A056 /* CustomAlertView.h */,
+				7E92062C25B982090074A056 /* CustomResultContentView.m */,
 				7E92063525B982090074A056 /* CustomTextView.h */,
-				7E92063625B982090074A056 /* CustomSheetContentView.h */,
+				7E92062E25B982090074A056 /* CustomTextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -283,10 +310,10 @@
 		7E92063725B982090074A056 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				7E92063B25B982090074A056 /* CustomSTOMPClient.h */,
 				7E92063825B982090074A056 /* CustomSTOMPClient.m */,
 				7E92063925B982090074A056 /* CustomImagePickerController.h */,
 				7E92063A25B982090074A056 /* CustomImagePickerController.m */,
-				7E92063B25B982090074A056 /* CustomSTOMPClient.h */,
 			);
 			path = "Third Party";
 			sourceTree = "<group>";
@@ -295,17 +322,17 @@
 			isa = PBXGroup;
 			children = (
 				7E92063D25B982090074A056 /* WeChatManager.h */,
-				7E92063E25B982090074A056 /* WebSocketManager.m */,
-				7E92063F25B982090074A056 /* NetWorkTool.m */,
-				7E92064025B982090074A056 /* StorageTool.m */,
-				7E92064125B982090074A056 /* LiveManager.m */,
-				7E92064225B982090074A056 /* UploadManager.h */,
 				7E92064325B982090074A056 /* WeChatManager.m */,
 				7E92064425B982090074A056 /* NetWorkTool.h */,
-				7E92064525B982090074A056 /* WebSocketManager.h */,
-				7E92064625B982090074A056 /* StorageTool.h */,
+				7E92063F25B982090074A056 /* NetWorkTool.m */,
+				7E92064225B982090074A056 /* UploadManager.h */,
 				7E92064725B982090074A056 /* UploadManager.m */,
+				7E92064525B982090074A056 /* WebSocketManager.h */,
+				7E92063E25B982090074A056 /* WebSocketManager.m */,
+				7E92064625B982090074A056 /* StorageTool.h */,
+				7E92064025B982090074A056 /* StorageTool.m */,
 				7E92064825B982090074A056 /* LiveManager.h */,
+				7E92064125B982090074A056 /* LiveManager.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -324,26 +351,39 @@
 		7E92064E25B982090074A056 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				7E92064F25B982090074A056 /* NSString+Custom.m */,
-				7E92065025B982090074A056 /* UITextField+Custom.m */,
-				7E92065125B982090074A056 /* UISearchBar+Custom.m */,
 				7E92065225B982090074A056 /* UIButton+Custom.h */,
-				7E92065325B982090074A056 /* UIFont+Custom.h */,
+				7E92065D25B982090074A056 /* UIButton+Custom.m */,
 				7E92065425B982090074A056 /* UIView+Custom.h */,
-				7E92065525B982090074A056 /* UIImage+Custom.m */,
+				7E92065B25B982090074A056 /* UIView+Custom.m */,
+				7E92065F25B982090074A056 /* UILabel+Custom.h */,
 				7E92065625B982090074A056 /* UILabel+Custom.m */,
 				7E92065725B982090074A056 /* NSObject+Custom.h */,
-				7E92065825B982090074A056 /* UISearchBar+Custom.h */,
-				7E92065925B982090074A056 /* UITextField+Custom.h */,
-				7E92065A25B982090074A056 /* NSString+Custom.h */,
-				7E92065B25B982090074A056 /* UIView+Custom.m */,
-				7E92065C25B982090074A056 /* UIFont+Custom.m */,
-				7E92065D25B982090074A056 /* UIButton+Custom.m */,
 				7E92065E25B982090074A056 /* NSObject+Custom.m */,
-				7E92065F25B982090074A056 /* UILabel+Custom.h */,
+				7E92065825B982090074A056 /* UISearchBar+Custom.h */,
+				7E92065125B982090074A056 /* UISearchBar+Custom.m */,
+				7E92065925B982090074A056 /* UITextField+Custom.h */,
+				7E92065025B982090074A056 /* UITextField+Custom.m */,
+				7E92065A25B982090074A056 /* NSString+Custom.h */,
+				7E92064F25B982090074A056 /* NSString+Custom.m */,
+				7E92065325B982090074A056 /* UIFont+Custom.h */,
+				7E92065C25B982090074A056 /* UIFont+Custom.m */,
 				7E92066025B982090074A056 /* UIImage+Custom.h */,
+				7E92065525B982090074A056 /* UIImage+Custom.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		82B60165061B325EB599EED2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F576CDFE2E7639C9D282EB84 /* Pods-CustomTools.debug.xcconfig */,
+				B98FAE62A98C4A8B8C639147 /* Pods-CustomTools.release.xcconfig */,
+				52284AE50B2FFA5FE8354FFE /* Pods-CustomTools-CustomToolsUITests.debug.xcconfig */,
+				EBFD420297CF584E59658E2B /* Pods-CustomTools-CustomToolsUITests.release.xcconfig */,
+				DE8C8321230F7BDF3B1C0692 /* Pods-CustomToolsTests.debug.xcconfig */,
+				40C644F5FE39700A19D25988 /* Pods-CustomToolsTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,9 +393,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E9205A225B980840074A056 /* Build configuration list for PBXNativeTarget "CustomTools" */;
 			buildPhases = (
+				3B0C50544D445A8B2C1C09A0 /* [CP] Check Pods Manifest.lock */,
 				7E92056F25B9807F0074A056 /* Sources */,
 				7E92057025B9807F0074A056 /* Frameworks */,
 				7E92057125B9807F0074A056 /* Resources */,
+				54390CDE549C8ED004817980 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -370,6 +412,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E9205A525B980840074A056 /* Build configuration list for PBXNativeTarget "CustomToolsTests" */;
 			buildPhases = (
+				57B5F9E5313F44B2BA3179D0 /* [CP] Check Pods Manifest.lock */,
 				7E92058A25B980830074A056 /* Sources */,
 				7E92058B25B980830074A056 /* Frameworks */,
 				7E92058C25B980830074A056 /* Resources */,
@@ -388,9 +431,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E9205A825B980840074A056 /* Build configuration list for PBXNativeTarget "CustomToolsUITests" */;
 			buildPhases = (
+				5861C7BEF27A0DD1D49E3061 /* [CP] Check Pods Manifest.lock */,
 				7E92059525B980840074A056 /* Sources */,
 				7E92059625B980840074A056 /* Frameworks */,
 				7E92059725B980840074A056 /* Resources */,
+				6DBF9C3E563BBEBCDBB4AD89 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -469,6 +514,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B0C50544D445A8B2C1C09A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomTools-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54390CDE549C8ED004817980 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomTools/Pods-CustomTools-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomTools/Pods-CustomTools-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CustomTools/Pods-CustomTools-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57B5F9E5313F44B2BA3179D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomToolsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5861C7BEF27A0DD1D49E3061 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomTools-CustomToolsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DBF9C3E563BBEBCDBB4AD89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomTools-CustomToolsUITests/Pods-CustomTools-CustomToolsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CustomTools-CustomToolsUITests/Pods-CustomTools-CustomToolsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CustomTools-CustomToolsUITests/Pods-CustomTools-CustomToolsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7E92056F25B9807F0074A056 /* Sources */ = {
@@ -676,6 +824,7 @@
 		};
 		7E9205A325B980840074A056 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F576CDFE2E7639C9D282EB84 /* Pods-CustomTools.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -694,6 +843,7 @@
 		};
 		7E9205A425B980840074A056 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B98FAE62A98C4A8B8C639147 /* Pods-CustomTools.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -712,6 +862,7 @@
 		};
 		7E9205A625B980840074A056 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE8C8321230F7BDF3B1C0692 /* Pods-CustomToolsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -732,6 +883,7 @@
 		};
 		7E9205A725B980840074A056 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40C644F5FE39700A19D25988 /* Pods-CustomToolsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -752,6 +904,7 @@
 		};
 		7E9205A925B980840074A056 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52284AE50B2FFA5FE8354FFE /* Pods-CustomTools-CustomToolsUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PH3KSJ6RHD;
@@ -770,6 +923,7 @@
 		};
 		7E9205AA25B980840074A056 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBFD420297CF584E59658E2B /* Pods-CustomTools-CustomToolsUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PH3KSJ6RHD;

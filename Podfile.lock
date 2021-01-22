@@ -1,0 +1,80 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - AliLiveSDK_iOS (4.0.2)
+  - AliyunOSSiOS (2.10.8)
+  - jetfire (0.1.2)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - SDWebImage (5.9.5):
+    - SDWebImage/Core (= 5.9.5)
+  - SDWebImage/Core (5.9.5)
+  - TZImagePickerController (3.5.7)
+  - VODUpload (1.6.1):
+    - AliyunOSSiOS
+  - WebsocketStompKit (0.1.1):
+    - jetfire (= 0.1.2)
+  - WechatOpenSDK (1.8.4)
+
+DEPENDENCIES:
+  - AFNetworking (~> 4.0.1)
+  - AliLiveSDK_iOS (~> 4.0.2)
+  - Masonry (~> 1.1.0)
+  - MBProgressHUD (~> 1.2.0)
+  - SDWebImage (~> 5.9.2)
+  - TZImagePickerController (~> 3.5.7)
+  - VODUpload (~> 1.6.1)
+  - WebsocketStompKit (from `https://github.com/gy37/WebsocketStompKit.git`)
+  - WechatOpenSDK (= 1.8.4)
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - AliLiveSDK_iOS
+    - AliyunOSSiOS
+    - jetfire
+    - Masonry
+    - MBProgressHUD
+    - SDWebImage
+    - TZImagePickerController
+    - VODUpload
+    - WechatOpenSDK
+
+EXTERNAL SOURCES:
+  WebsocketStompKit:
+    :git: https://github.com/gy37/WebsocketStompKit.git
+
+CHECKOUT OPTIONS:
+  WebsocketStompKit:
+    :commit: 0808ef10f02271d0947a56e30ec8041a78dda5d6
+    :git: https://github.com/gy37/WebsocketStompKit.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  AliLiveSDK_iOS: e4f44cffb860086fd75b662da0cf9994275172d6
+  AliyunOSSiOS: 8db92936545593b9e5c66d680ef2ac0738946651
+  jetfire: 5e823aa9248d3de1fac2b7b6d9c6e31ab7d90f0c
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  SDWebImage: 0b2ba0d56479bf6a45ecddbfd5558bea93150d25
+  TZImagePickerController: aff4b62eacce0194d2494ee4f42934bcff577cec
+  VODUpload: 2c8ac654ceda839dda97a92023a270041dd9901e
+  WebsocketStompKit: 31de925ffc7094b569dedcd4a9a4838e649e0860
+  WechatOpenSDK: 9b721089507c895d05f997408c30bb6e6f5f9b60
+
+PODFILE CHECKSUM: aef883f777106f439bdb20d9dd267be34c79e60e
+
+COCOAPODS: 1.10.0.rc.1

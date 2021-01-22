@@ -17,8 +17,8 @@
 #import "NSObject+Custom.h"
 #import "CustomProgressHUD.h"
 #import "NetWorkTool.h"
-#import <SDWebImage.h>
-#import <MJExtension.h>
+//#import <SDWebImage.h>
+//#import <MJExtension.h>
 #import "UIFont+Custom.h"
 
 
