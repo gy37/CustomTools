@@ -22,11 +22,15 @@ static WeChatManager *manager;
 }
 
 - (void)registerApp:(NSString *)appid {
-    [WXApi registerApp:appid];
+    [WXApi registerApp:appid universalLink:UNIVERSAL_LINK];
 }
 
 - (BOOL)handleOpenURL:(NSURL *)url {
     return [WXApi handleOpenURL:url delegate:self];
+}
+
+- (void)handleOpenUniversalLink:(NSUserActivity *)activity {
+    [WXApi handleOpenUniversalLink:activity delegate:self];
 }
 
 #pragma mark - 微信分享
@@ -53,7 +57,9 @@ static WeChatManager *manager;
     req.bText = NO;
     req.message = message;
     req.scene = type == WeChatTypeFriendCircle ? WXSceneTimeline : WXSceneSession;
-    [WXApi sendReq:req];
+    [WXApi sendReq:req completion:^(BOOL success) {
+        NSLog(@"sendReq result: %d", success);
+    }];
 }
 
 #pragma mark - WXApiDelegate

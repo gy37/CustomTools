@@ -170,8 +170,6 @@ const CGFloat alertViewCornerRadius = 5;
             }];
             alertView.messageLabel.text = message;
             [alertView.confirmButton setTitle:@"知道了" forState:UIControlStateNormal];
-            
-            [alertView addTapToHide];
             break;
         }
         case CustomAlertViewTypeConfirm: {

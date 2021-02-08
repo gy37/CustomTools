@@ -129,17 +129,29 @@ NSString *const HomeApplyLink = @"Apply://";
 
 #pragma mark - text
 
-- (CGFloat)getTextHeightWithWidth:(CGFloat)width fontSize:(CGFloat)fontSize {
-    return [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:fontSize]} context:nil].size.height;
+- (CGFloat)getTextHeightWithWidth:(CGFloat)width fontSize:(CGFloat)fontSize  {
+    return [self getTextHeightWithWidth:width fontSize:fontSize isBold:NO];
+}
+
+- (CGFloat)getTextHeightWithWidth:(CGFloat)width fontSize:(CGFloat)fontSize isBold:(BOOL)isBold {
+    return [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:fontSize weight:isBold ? UIFontWeightMedium : UIFontWeightRegular]} context:nil].size.height;
 }
 
 - (CGFloat)getTextWidthWithHeight:(CGFloat)height fontSize:(CGFloat)fontSize {
-    return [self boundingRectWithSize:CGSizeMake(MAXFLOAT, height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:fontSize]} context:nil].size.width;
+    return [self getTextWidthWithHeight:height fontSize:fontSize isBold:NO];
+}
+
+- (CGFloat)getTextWidthWithHeight:(CGFloat)height fontSize:(CGFloat)fontSize isBold:(BOOL)isBold {
+    return [self boundingRectWithSize:CGSizeMake(MAXFLOAT, height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:fontSize weight:isBold ? UIFontWeightMedium : UIFontWeightRegular]} context:nil].size.width;
 }
 
 - (BOOL)checkIsSingleLine:(CGFloat)width fontSize:(CGFloat)fontSize {
+    return [self checkIsSingleLine:width fontSize:fontSize isBold:NO];
+}
+
+- (BOOL)checkIsSingleLine:(CGFloat)width fontSize:(CGFloat)fontSize isBold:(BOOL)isBold {
     CGFloat singleLineHeight = fontSize + 4;
-    BOOL isSignleLine = [self getTextHeightWithWidth:width fontSize:fontSize] <= singleLineHeight;
+    BOOL isSignleLine = [self getTextHeightWithWidth:width fontSize:fontSize isBold:isBold] <= singleLineHeight;
     return isSignleLine;
 }
 
@@ -226,14 +238,13 @@ NSString *const HomeApplyLink = @"Apply://";
     return dictionary;
 }
 
-
 #pragma mark - private
 
 static NSDateFormatter *dateFormatter;
 + (NSDateFormatter *)getDateFormatter {
     if (!dateFormatter) {//NSDateFormatter内存优化
         dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+        [dateFormatter setDateFormat:@"yyyy.MM.dd HH:mm"];
     }
     return dateFormatter;
 }

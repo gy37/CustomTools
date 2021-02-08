@@ -10,8 +10,8 @@
 #import "UIButton+Custom.h"
 #import "CustomAlertView.h"
 #import "StorageTool.h"
-#import "LoginViewController.h"
-#import "VideoViewController.h"
+//#import "LoginViewController.h"
+//#import "VideoViewController.h"
 
 @interface BaseViewController ()
 
@@ -72,10 +72,10 @@ const NSInteger itemButtonTag = 10000;
 }
 
 - (void)showLoginController {
-    if (![self isKindOfClass:[LoginViewController class]]) {
-        UIViewController *loginController = ViewControllerInStoryboard(NSStringFromClass([LoginViewController class]));
-        [self presentViewController:loginController animated:YES completion:NULL];
-    }
+//    if (![self isKindOfClass:[LoginViewController class]]) {
+//        UIViewController *loginController = ViewControllerInStoryboard(NSStringFromClass([LoginViewController class]));
+//        [self presentViewController:loginController animated:YES completion:NULL];
+//    }
 }
 
 
@@ -88,7 +88,7 @@ const NSInteger itemButtonTag = 10000;
         [[PHImageManager defaultManager] requestImageDataForAsset:assets.firstObject options:nil resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
             NSLog(@"%@", info);
             
-            UIImage *clipedImage = [UIImage clipImage:photos.firstObject];
+            UIImage *clipedImage = [UIImage clipImage:photos.firstObject];//photos.firstObject;
             NSString *path = [StorageTool saveImageToLocal:clipedImage withFormat:[[info[@"PHImageFileURLKey"] path] componentsSeparatedByString:@"."].lastObject];
             if (pickImage) {
                 pickImage(clipedImage, path);
@@ -207,9 +207,9 @@ const NSInteger itemButtonTag = 10000;
     //iOS13 之后手动设置弹出页面全屏
     viewControllerToPresent.modalPresentationStyle = UIModalPresentationFullScreen;
     if (flag) {//有动画效果时，控制是否是透明导航栏
-        if ([self isKindOfClass:[VideoViewController class]]) {
-            self.keepNormalNavigationBar = YES;
-        }
+//        if ([self isKindOfClass:[VideoViewController class]]) {
+//            self.keepNormalNavigationBar = YES;
+//        }
     }
     
     [super presentViewController:viewControllerToPresent animated:flag completion:^{

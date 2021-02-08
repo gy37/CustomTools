@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)printAllPropertiesOfObject;
 
 - (void)performSelectorInSuper:(SEL)selector withObject:(id)object;
+
+- (BOOL)isNullOrNil;
+- (id)getSafetyObject;
 @end
 
 NS_ASSUME_NONNULL_END

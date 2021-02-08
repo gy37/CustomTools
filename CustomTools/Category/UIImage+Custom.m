@@ -113,23 +113,46 @@
 }
 
 + (UIImage *)clipImage:(UIImage *)image {
+    CGFloat cropRatio = 3 / 5.0;
     CGSize size = image.size;
     CGFloat width, height;
     if (size.width > size.height) {
         height = size.height;
-        width = height * 5 / 3.0;
+        width = height / cropRatio;
+        if (width > size.width) {
+            width = size.width;
+            height = width * cropRatio;
+        }
     } else {
         width = size.width;
-        height = width * 3 / 5.0;
+        height = width * cropRatio;
+        if (height > size.height) {
+            height = size.height;
+            width = height / cropRatio;
+        }
     }
     CGRect rect = CGRectMake(0, (size.height - height) / 2, width, height);
-    return [self clipImage:image ofRect:rect];
+    return [self clipImage:image toRect:rect];
 }
 
-+ (UIImage *)clipImage:(UIImage *)image ofRect:(CGRect)rect {
-    CGImageRef sourceImageRef = [image CGImage];//将UIImage转换成CGImageRef
-    CGImageRef newImageRef = CGImageCreateWithImageInRect(sourceImageRef, rect);//按照给定的矩形区域进行剪裁
-    UIImage *newImage = [UIImage imageWithCGImage:newImageRef];
++ (UIImage *)clipImage:(UIImage *)image toRect:(CGRect)rect {
+    CGImageRef newImageRef = CGImageCreateWithImageInRect(image.CGImage, rect);//按照给定的矩形区域进行剪裁
+    UIImage *newImage = [UIImage imageWithCGImage:newImageRef scale:image.scale orientation:image.imageOrientation];
+    CGImageRelease(newImageRef);
     return newImage;
 }
+
++ (UIImage *)clipCameraPicture:(UIImage *)image toInsets:(UIEdgeInsets)insets {
+    CGFloat scale = image.size.width / COMMON_SCREEN_WIDTH;
+    CGFloat top = insets.top * scale;
+    CGFloat left = insets.left * scale;
+    CGFloat right = insets.right * scale;
+    CGFloat bottom = insets.bottom * scale;
+    //UIImageOrientationRight CGImage的宽高和UIImage的宽高相反
+    CGRect cropRect = CGRectMake(top, left, image.size.height - top - bottom, image.size.width - left - right);
+    CGImageRef newImageRef = CGImageCreateWithImageInRect(image.CGImage, cropRect);//按照给定的矩形区域进行剪裁
+    UIImage *newImage = [UIImage imageWithCGImage:newImageRef scale:image.scale orientation:image.imageOrientation];
+    return newImage;
+}
+
 @end

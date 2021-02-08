@@ -27,7 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 //stretch & clip
 + (UIImage *)getStretchedImage:(NSString *)imageName;
 + (UIImage *)clipImage:(UIImage *)image;
-+ (UIImage *)clipImage:(UIImage *)image ofRect:(CGRect)rect;
++ (UIImage *)clipImage:(UIImage *)image toRect:(CGRect)rect;
++ (UIImage *)clipCameraPicture:(UIImage *)image toInsets:(UIEdgeInsets)insets;
 @end
 
 NS_ASSUME_NONNULL_END

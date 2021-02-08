@@ -23,6 +23,10 @@ height;\
 })
 #define IS_NOTCH_SCREEN COMMON_STATUS_BAR_HEIGHT >= 44.f
 #define IS_BIG_SCREEN COMMON_SCREEN_HEIGHT >= 736.f
+#define VIDEO_RECT_TOP 83.f
+#define VIDEO_RECT_BOTTOM 77.f
+#define NOTCH_SCREEN_VIDEO_RECT_TOP 121.f
+#define NOTCH_SCREEN_VIDEO_RECT_BOTTOM 223.f
 
 #define COMMON_INNER_SPACE 8
 #define COMMON_BORDER_WIDTH 1
@@ -54,5 +58,6 @@ height;\
 
 #pragma mark - app id
 #define WECHAT_APPID @""
+#define UNIVERSAL_LINK @""
 
 #endif /* Values_h */

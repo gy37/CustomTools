@@ -58,7 +58,7 @@ static LiveManager *manager;
     AliLiveConfig *myConfig = [[AliLiveConfig alloc] init];
     myConfig.videoProfile = AliLiveVideoProfile_540P;
     myConfig.videoFPS = 20;
-    myConfig.pauseImage = [UIImage imageNamed:@"background"];
+//    myConfig.pauseImage = [UIImage imageNamed:@"background"];
     myConfig.accountID = @"";
     AliLiveEngine *engine = [[AliLiveEngine alloc] initWithConfig:myConfig];
     [engine setAudioSessionOperationRestriction:AliLiveAudioSessionOperationRestrictionDeactivateSession];
@@ -166,6 +166,14 @@ static LiveManager *manager;
 
 - (void)resumeStreaming {
     [self.engine resumePush];
+}
+
+- (void)stopPush {
+    [self.engine stopPush];
+}
+
+- (void)startPushWithUrl:(NSString *)url {
+    [self.engine startPushWithURL:url];
 }
 
 //#pragma mark - PLMediaStreamingSessionDelegate

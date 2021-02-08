@@ -18,6 +18,7 @@ typedef NS_ENUM(NSInteger, WeChatType) {
 + (instancetype)sharedManager;
 - (void)registerApp:(NSString *)appid;
 - (BOOL)handleOpenURL:(NSURL *)url;
+- (void)handleOpenUniversalLink:(NSUserActivity *)activity;
 /**
  分享到微信
  

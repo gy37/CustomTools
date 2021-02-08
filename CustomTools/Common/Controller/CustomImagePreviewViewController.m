@@ -8,6 +8,7 @@
 
 #import "CustomImagePreviewViewController.h"
 #import "UIButton+Custom.h"
+#import "CustomActionSheet.h"
 
 @interface CustomImagePreviewViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *centerImageView;
@@ -43,6 +44,14 @@
 - (void)setupUI {
     self.view.hidden = YES;
     self.centerImageView.userInteractionEnabled = YES;
+    CGFloat top = 0;
+    if (IS_NOTCH_SCREEN) {
+        top = NOTCH_SCREEN_VIDEO_RECT_TOP - NOTCH_SCREEN_VIDEO_RECT_BOTTOM;
+    } else {
+//        top = COMMON_SCREEN_WIDTH - (COMMON_SCREEN_WIDTH - VIDEO_RECT_TOP - VIDEO_RECT_BOTTOM) - VIDEO_RECT_BOTTOM * 2;
+        top = VIDEO_RECT_TOP - VIDEO_RECT_BOTTOM;
+    }
+    [self.centerImageView updateOtherViewRealtedNSLayoutConstraint:NSLayoutAttributeTop constant:top];
     
     [self.closeButton setupButtonWithIconName:@"\U0000e62b" iconSize:24 iconColor:[UIColor whiteColor]];
     [self.nextButton setCornerRadiusHalfHeight];
@@ -87,8 +96,12 @@
 
 - (IBAction)closeController:(UIButton *)sender {
     if (self.closeBlock) {
-        self.view.hidden = YES;
-        self.closeBlock();
+        [CustomActionSheet showActionSheet:CustomActionSheetTypeVertical titles:@[@"退出"] clickedAt:^(NSInteger index) {
+            if (index == 0) {
+                self.closeBlock();
+                [self dismissViewControllerAnimated:YES completion:NULL];
+            }
+        }];
     } else {
         [self dismissViewControllerAnimated:YES completion:NULL];
     }

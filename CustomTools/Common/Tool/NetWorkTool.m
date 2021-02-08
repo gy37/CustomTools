@@ -11,6 +11,7 @@
 #import "StorageTool.h"
 
 @implementation NetWorkTool
+NSString *errorKey = @"com.alamofire.serialization.response.error.data";
 
 + (void)getUrlPath:(NSString *)path parameters:(NSDictionary *)parameters success:(RequestSuccess)success failed:(RequestFailed)failed {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -42,9 +43,31 @@
                 if (response.statusCode == 401) {
                     [StorageTool clearLocalTokenInfo];
                     [[NSNotificationCenter defaultCenter] postNotificationName:UNAUTHORIZED_NOTIFICATION object:nil];
-                } else {
-                    [CustomProgressHUD showTextHUD:@"发生错误"];
+                } else {//500错误的错误信息
+                    NSString *hudString = @"发生错误";
+                    if ([error.userInfo.allKeys containsObject:errorKey] && error.userInfo[errorKey]) {
+                        NSData *errorData = error.userInfo[errorKey];
+                        NSDictionary *errorDictionary = [NSJSONSerialization JSONObjectWithData:errorData options:NSJSONReadingAllowFragments error:nil];
+                        if (errorDictionary && [errorDictionary.allKeys containsObject:@"subMsg"] && [errorDictionary[@"subMsg"] length] > 0) {
+                            hudString = errorDictionary[@"subMsg"];
+                        } else if (errorDictionary && [errorDictionary.allKeys containsObject:@"error"] && [errorDictionary[@"error"] length] > 0) {
+                            hudString = errorDictionary[@"error"];
+                        } else {
+                            
+                        }
+                    } else {
+                        
+                    }
+                    [CustomProgressHUD showTextHUD:hudString];
                 }
+            } else {//NSLocalizedDescription
+                NSString *hudString = @"发生错误";
+                if (error.userInfo && error.userInfo[@"NSLocalizedDescription"]) {
+                    hudString = error.userInfo[@"NSLocalizedDescription"];
+                } else {
+                    
+                }
+                [CustomProgressHUD showTextHUD:hudString];
             }
         }];
 }
@@ -83,9 +106,31 @@
                 if (response.statusCode == 401) {
                     [StorageTool clearLocalTokenInfo];
                     [[NSNotificationCenter defaultCenter] postNotificationName:UNAUTHORIZED_NOTIFICATION object:nil];
-                } else {
-                    [CustomProgressHUD showTextHUD:@"发生错误"];
+                } else {//500错误的错误信息
+                    NSString *hudString = @"发生错误";
+                    if ([error.userInfo.allKeys containsObject:errorKey] && error.userInfo[errorKey]) {
+                        NSData *errorData = error.userInfo[errorKey];
+                        NSDictionary *errorDictionary = [NSJSONSerialization JSONObjectWithData:errorData options:NSJSONReadingAllowFragments error:nil];
+                        if (errorDictionary && [errorDictionary.allKeys containsObject:@"subMsg"] && [errorDictionary[@"subMsg"] length] > 0) {
+                            hudString = errorDictionary[@"subMsg"];
+                        } else if (errorDictionary && [errorDictionary.allKeys containsObject:@"error"] && [errorDictionary[@"error"] length] > 0) {
+                            hudString = errorDictionary[@"error"];
+                        } else {
+                            
+                        }
+                    } else {
+                        
+                    }
+                    [CustomProgressHUD showTextHUD:hudString];
                 }
+            } else {//NSLocalizedDescription
+                NSString *hudString = @"发生错误";
+                if (error.userInfo && error.userInfo[@"NSLocalizedDescription"]) {
+                    hudString = error.userInfo[@"NSLocalizedDescription"];
+                } else {
+                    
+                }
+                [CustomProgressHUD showTextHUD:hudString];
             }
         }];
 }
@@ -126,9 +171,31 @@
                 if (response.statusCode == 401) {
                     [StorageTool clearLocalTokenInfo];
                     [[NSNotificationCenter defaultCenter] postNotificationName:UNAUTHORIZED_NOTIFICATION object:nil];
-                } else {
-                    [CustomProgressHUD showTextHUD:@"发生错误"];
+                } else {//500错误的错误信息
+                    NSString *hudString = @"发生错误";
+                    if ([error.userInfo.allKeys containsObject:errorKey] && error.userInfo[errorKey]) {
+                        NSData *errorData = error.userInfo[errorKey];
+                        NSDictionary *errorDictionary = [NSJSONSerialization JSONObjectWithData:errorData options:NSJSONReadingAllowFragments error:nil];
+                        if (errorDictionary && [errorDictionary.allKeys containsObject:@"subMsg"] && [errorDictionary[@"subMsg"] length] > 0) {
+                            hudString = errorDictionary[@"subMsg"];
+                        } else if (errorDictionary && [errorDictionary.allKeys containsObject:@"error"] && [errorDictionary[@"error"] length] > 0) {
+                            hudString = errorDictionary[@"error"];
+                        } else {
+                            
+                        }
+                    } else {
+                        
+                    }
+                    [CustomProgressHUD showTextHUD:hudString];
                 }
+            } else {//NSLocalizedDescription
+                NSString *hudString = @"发生错误";
+                if (error.userInfo && error.userInfo[@"NSLocalizedDescription"]) {
+                    hudString = error.userInfo[@"NSLocalizedDescription"];
+                } else {
+                    
+                }
+                [CustomProgressHUD showTextHUD:hudString];
             }
         }];
 }

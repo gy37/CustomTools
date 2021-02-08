@@ -16,9 +16,14 @@ PODS:
     - AFNetworking/NSURLSession
   - AliLiveSDK_iOS (4.0.2)
   - AliyunOSSiOS (2.10.8)
+  - GMObjC (3.1.2):
+    - GMOpenSSL
+  - GMOpenSSL (2.0.3)
   - jetfire (0.1.2)
+  - libOpenInstallSDK (2.5.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
+  - MJExtension (3.2.2)
   - SDWebImage (5.9.5):
     - SDWebImage/Core (= 5.9.5)
   - SDWebImage/Core (5.9.5)
@@ -27,27 +32,35 @@ PODS:
     - AliyunOSSiOS
   - WebsocketStompKit (0.1.1):
     - jetfire (= 0.1.2)
-  - WechatOpenSDK (1.8.4)
+  - WechatOpenSDK (1.8.7.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 4.0.1)
   - AliLiveSDK_iOS (~> 4.0.2)
+  - GMObjC (~> 3.1.2)
+  - GMOpenSSL (= 2.0.3)
+  - libOpenInstallSDK (~> 2.5.0)
   - Masonry (~> 1.1.0)
   - MBProgressHUD (~> 1.2.0)
+  - MJExtension (~> 3.2.2)
   - SDWebImage (~> 5.9.2)
   - TZImagePickerController (~> 3.5.7)
   - VODUpload (~> 1.6.1)
   - WebsocketStompKit (from `https://github.com/gy37/WebsocketStompKit.git`)
-  - WechatOpenSDK (= 1.8.4)
+  - WechatOpenSDK (~> 1.8.6)
 
 SPEC REPOS:
   trunk:
     - AFNetworking
     - AliLiveSDK_iOS
     - AliyunOSSiOS
+    - GMObjC
+    - GMOpenSSL
     - jetfire
+    - libOpenInstallSDK
     - Masonry
     - MBProgressHUD
+    - MJExtension
     - SDWebImage
     - TZImagePickerController
     - VODUpload
@@ -66,15 +79,19 @@ SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   AliLiveSDK_iOS: e4f44cffb860086fd75b662da0cf9994275172d6
   AliyunOSSiOS: 8db92936545593b9e5c66d680ef2ac0738946651
+  GMObjC: 19aec07bbfcde3d41e00afbea224efa89cab9ba7
+  GMOpenSSL: 614ac2fff9bbeb1008a8b1eb624e7952ecc85220
   jetfire: 5e823aa9248d3de1fac2b7b6d9c6e31ab7d90f0c
+  libOpenInstallSDK: 961cda04b7a85a8bb2c134aa2f5372cf7dcd016d
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
   SDWebImage: 0b2ba0d56479bf6a45ecddbfd5558bea93150d25
   TZImagePickerController: aff4b62eacce0194d2494ee4f42934bcff577cec
   VODUpload: 2c8ac654ceda839dda97a92023a270041dd9901e
   WebsocketStompKit: 31de925ffc7094b569dedcd4a9a4838e649e0860
-  WechatOpenSDK: 9b721089507c895d05f997408c30bb6e6f5f9b60
+  WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
 
-PODFILE CHECKSUM: aef883f777106f439bdb20d9dd267be34c79e60e
+PODFILE CHECKSUM: c8100c90ead7ecf8bd5c098f980c29b2f56d4793
 
 COCOAPODS: 1.10.0.rc.1

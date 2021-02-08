@@ -50,6 +50,9 @@ NSInteger const cameraButtonTag = 10000;
     self.cannotSelectLayerColor = HALF_WHITE_COLOR;
     @weakify(self);
     __block UICollectionView *photoSelectCollectionView;
+    [self setAlbumPickerPageUIConfigBlock:^(UITableView *tableView) {
+        tableView.hidden = YES;
+    }];
     [self setPhotoPickerPageDidLayoutSubviewsBlock:^(UICollectionView *collectionView, UIView *bottomToolBar, UIButton *previewButton, UIButton *originalPhotoButton, UILabel *originalPhotoLabel, UIButton *doneButton, UIImageView *numberImageView, UILabel *numberLabel, UIView *divideLine) {
         @strongify(self);
         bottomToolBar.hidden = YES;

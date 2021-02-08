@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UISearchBar (Custom)
-- (void)setupCornerRadius:(CGFloat)radius fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor;
+- (void)setupFontSize:(CGFloat)fontSize textColor:(UIColor *)textColor;
 - (void)setupCancelButton:(NSString *)title;
 - (id)getSubViewOfClass:(Class)class;
 @end

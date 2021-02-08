@@ -106,4 +106,17 @@
     }
 }
 
+- (BOOL)isNullOrNil {
+    BOOL isNullOrNil = NO;
+    if ([self isEqual:[NSNull null]] || [self isKindOfClass:[NSNull class]]) {
+        isNullOrNil = YES;
+    } else if (self == nil){
+        isNullOrNil = YES;
+    }
+    return isNullOrNil;
+}
+
+- (id)getSafetyObject {
+    return [self isNullOrNil] ? @"" : self;
+}
 @end

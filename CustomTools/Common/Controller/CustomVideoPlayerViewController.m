@@ -15,8 +15,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
-@property (weak, nonatomic) IBOutlet UIButton *retakeButton;
 
+
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
+@property (weak, nonatomic) IBOutlet UIButton *retakeButton;
 @property (weak, nonatomic) IBOutlet UISlider *sliderView;
 @property (weak, nonatomic) IBOutlet UILabel *playTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalTimeLabel;
@@ -62,6 +64,13 @@
     [self.retakeButton setupButtonToTopBottomPosition];
     
     [self setupSubviewsForPreview:NO];
+    
+    if (IS_NOTCH_SCREEN) {
+        [self.bottomView updateOtherViewRealtedNSLayoutConstraint:NSLayoutAttributeBottom constant:50];
+        [self.closeButton updateOtherViewRealtedNSLayoutConstraint:NSLayoutAttributeTop constant:0];
+        [self.titleLabel updateOtherViewRealtedNSLayoutConstraint:NSLayoutAttributeTop constant:0];
+        [self.nextButton updateOtherViewRealtedNSLayoutConstraint:NSLayoutAttributeTop constant:0];
+    }
 }
 
 - (void)setupValue {
@@ -115,7 +124,11 @@
 - (void)setupPlayer {
     if (self.player) {
         self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
-        self.playerLayer.frame = self.view.bounds;
+        CGRect frame = CGRectMake(0, 0, COMMON_SCREEN_WIDTH, COMMON_SCREEN_HEIGHT);
+        if (IS_NOTCH_SCREEN) {
+            frame = CGRectMake(0, VIDEO_RECT_TOP, COMMON_SCREEN_WIDTH, COMMON_SCREEN_HEIGHT - VIDEO_RECT_TOP - VIDEO_RECT_BOTTOM);
+        }
+        self.playerLayer.frame = frame;
         [self.view.layer insertSublayer:self.playerLayer atIndex:0];
         
         [self addPlayerTimeObserver];

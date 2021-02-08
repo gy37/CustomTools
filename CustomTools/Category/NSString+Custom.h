@@ -27,8 +27,11 @@ extern NSString *const HomeApplyLink;
 - (NSDate *)millisecondStringToDate;
 
 - (CGFloat)getTextHeightWithWidth:(CGFloat)width fontSize:(CGFloat)fontSize;
+- (CGFloat)getTextHeightWithWidth:(CGFloat)width fontSize:(CGFloat)fontSize isBold:(BOOL)isBold;
 - (CGFloat)getTextWidthWithHeight:(CGFloat)height fontSize:(CGFloat)fontSize;
+- (CGFloat)getTextWidthWithHeight:(CGFloat)height fontSize:(CGFloat)fontSize isBold:(BOOL)isBold;
 - (BOOL)checkIsSingleLine:(CGFloat)width fontSize:(CGFloat)fontSize;
+- (BOOL)checkIsSingleLine:(CGFloat)width fontSize:(CGFloat)fontSize isBold:(BOOL)isBold;
 
 + (NSString *)getCountString:(NSInteger)count;
 + (NSString *)getTimeIntervalString:(NSTimeInterval)duration;

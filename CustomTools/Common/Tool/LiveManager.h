@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)pauseStreaming;
 - (void)resumeStreaming;
 - (void)stopStreaming;
+- (void)stopPush;
+- (void)startPushWithUrl:(NSString *)url;
 @end
 
 NS_ASSUME_NONNULL_END
