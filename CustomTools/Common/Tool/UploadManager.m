@@ -8,6 +8,7 @@
 
 #import "UploadManager.h"
 #import "CustomProgressHUD.h"
+#import "NetWorkTool.h"
 
 #import <VODUpload/VODUploadClient.h>
 #import <VODUpload/VODUploadModel.h>

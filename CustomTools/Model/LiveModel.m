@@ -7,6 +7,7 @@
 //
 
 #import "LiveModel.h"
+#import <MJExtension.h>
 
 @implementation LiveModel
 

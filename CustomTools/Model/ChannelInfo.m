@@ -7,6 +7,7 @@
 //
 
 #import "ChannelInfo.h"
+#import <MJExtension.h>
 
 @implementation ChannelInfo
 
