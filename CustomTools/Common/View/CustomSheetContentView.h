@@ -2,8 +2,8 @@
 //  CustomSheetContentView.h
 //  WMYLink
 //
-//  Created by yizhi on 2020/12/17.
-//  Copyright © 2020 YiZhi. All rights reserved.
+//  Created by yuyuyu on 2020/12/17.
+//  Copyright © 2020 yuyuyu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

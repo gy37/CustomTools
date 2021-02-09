@@ -2,8 +2,8 @@
 //  NetWorkTool.m
 //  WMYLink
 //
-//  Created by yizhi on 2020/12/10.
-//  Copyright © 2020 YiZhi. All rights reserved.
+//  Created by yuyuyu on 2020/12/10.
+//  Copyright © 2020 yuyuyu. All rights reserved.
 //
 
 #import "NetWorkTool.h"

@@ -2,8 +2,8 @@
 //  StorageTool.h
 //  WMYLink
 //
-//  Created by 高申宇 on 2020/12/9.
-//  Copyright © 2020 YiZhi. All rights reserved.
+//  Created by yuyuyu on 2020/12/9.
+//  Copyright © 2020 yuyuyu. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

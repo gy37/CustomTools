@@ -2,8 +2,8 @@
 //  CustomGuideView.h
 //  WMYLink
 //
-//  Created by yizhi on 2021/1/20.
-//  Copyright © 2021 YiZhi. All rights reserved.
+//  Created by yuyuyu on 2021/1/20.
+//  Copyright © 2021 yuyuyu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

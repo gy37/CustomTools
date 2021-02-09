@@ -2,8 +2,8 @@
 //  URL.h
 //  WMYLink
 //
-//  Created by yizhi on 2020/12/14.
-//  Copyright © 2020 YiZhi. All rights reserved.
+//  Created by yuyuyu on 2020/12/14.
+//  Copyright © 2020 yuyuyu. All rights reserved.
 //
 
 #ifndef Network_h

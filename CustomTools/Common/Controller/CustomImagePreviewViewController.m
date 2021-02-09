@@ -2,8 +2,8 @@
 //  CustomImagePreviewViewController.m
 //  WMYLink
 //
-//  Created by yizhi on 2021/1/7.
-//  Copyright © 2021 YiZhi. All rights reserved.
+//  Created by yuyuyu on 2021/1/7.
+//  Copyright © 2021 yuyuyu. All rights reserved.
 //
 
 #import "CustomImagePreviewViewController.h"

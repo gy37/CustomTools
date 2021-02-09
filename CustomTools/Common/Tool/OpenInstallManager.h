@@ -2,8 +2,8 @@
 //  OpenInstallManager.h
 //  WMYLink
 //
-//  Created by yizhi on 2021/2/4.
-//  Copyright © 2021 YiZhi. All rights reserved.
+//  Created by yuyuyu on 2021/2/4.
+//  Copyright © 2021 yuyuyu. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

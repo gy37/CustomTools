@@ -52,6 +52,8 @@
 		7E92058925B980830074A056 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E92058825B980830074A056 /* main.m */; };
 		7E92059325B980830074A056 /* CustomToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E92059225B980830074A056 /* CustomToolsTests.m */; };
 		7E92059E25B980840074A056 /* CustomToolsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E92059D25B980840074A056 /* CustomToolsUITests.m */; };
+		7E9EAA9025D269E0008308FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E9EAA8F25D269E0008308FF /* Images.xcassets */; };
+		7E9EAA9525D26A46008308FF /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E9EAA9425D26A46008308FF /* iconfont.ttf */; };
 		EB88581688BBDB2E9FEADA06 /* Pods_CustomTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C333F621EA88C6789AB4DE28 /* Pods_CustomTools.framework */; };
 /* End PBXBuildFile section */
 
@@ -167,6 +169,8 @@
 		7E92064B25B982090074A056 /* URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL.h; sourceTree = "<group>"; };
 		7E92064C25B982090074A056 /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
 		7E92064D25B982090074A056 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7E9EAA8F25D269E0008308FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7E9EAA9425D26A46008308FF /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		B98FAE62A98C4A8B8C639147 /* Pods-CustomTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTools.release.xcconfig"; path = "Target Support Files/Pods-CustomTools/Pods-CustomTools.release.xcconfig"; sourceTree = "<group>"; };
 		C333F621EA88C6789AB4DE28 /* Pods_CustomTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8C8321230F7BDF3B1C0692 /* Pods-CustomToolsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomToolsTests.debug.xcconfig"; path = "Target Support Files/Pods-CustomToolsTests/Pods-CustomToolsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -243,18 +247,18 @@
 		7E0F824625D11FE70002F83E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7E0F824725D11FE70002F83E /* CustomActionSheet.h */,
-				7E0F824F25D11FE70002F83E /* CustomActionSheet.m */,
 				7E0F824E25D11FE70002F83E /* CustomGuideView.h */,
 				7E0F824825D11FE70002F83E /* CustomGuideView.m */,
 				7E0F824925D11FE70002F83E /* CustomProgressHUD.h */,
 				7E0F825125D11FE70002F83E /* CustomProgressHUD.m */,
-				7E0F825025D11FE70002F83E /* CustomResultContentView.h */,
-				7E0F824A25D11FE70002F83E /* CustomResultContentView.m */,
-				7E0F825425D11FE70002F83E /* CustomSheetContentView.h */,
-				7E0F824B25D11FE70002F83E /* CustomSheetContentView.m */,
 				7E0F825225D11FE70002F83E /* CustomAlertView.h */,
 				7E0F824D25D11FE70002F83E /* CustomAlertView.m */,
+				7E0F825025D11FE70002F83E /* CustomResultContentView.h */,
+				7E0F824A25D11FE70002F83E /* CustomResultContentView.m */,
+				7E0F824725D11FE70002F83E /* CustomActionSheet.h */,
+				7E0F824F25D11FE70002F83E /* CustomActionSheet.m */,
+				7E0F825425D11FE70002F83E /* CustomSheetContentView.h */,
+				7E0F824B25D11FE70002F83E /* CustomSheetContentView.m */,
 				7E0F825325D11FE70002F83E /* CustomTextView.h */,
 				7E0F824C25D11FE70002F83E /* CustomTextView.m */,
 			);
@@ -362,17 +366,8 @@
 				7E0F826925D11FE70002F83E /* Category */,
 				7E0F823A25D11FE70002F83E /* Common */,
 				7E92064925B982090074A056 /* Macro */,
-				7E92057625B9807F0074A056 /* AppDelegate.h */,
-				7E92057725B9807F0074A056 /* AppDelegate.m */,
-				7E92057925B9807F0074A056 /* SceneDelegate.h */,
-				7E92057A25B9807F0074A056 /* SceneDelegate.m */,
-				7E92057C25B9807F0074A056 /* ViewController.h */,
-				7E92057D25B9807F0074A056 /* ViewController.m */,
-				7E92057F25B9807F0074A056 /* Main.storyboard */,
-				7E92058225B980830074A056 /* Assets.xcassets */,
-				7E92058425B980830074A056 /* LaunchScreen.storyboard */,
-				7E92058725B980830074A056 /* Info.plist */,
-				7E92058825B980830074A056 /* main.m */,
+				7E9EAA7B25D264C1008308FF /* Main */,
+				7E9EAA8225D264EB008308FF /* Supporting Files */,
 			);
 			path = CustomTools;
 			sourceTree = "<group>";
@@ -404,6 +399,33 @@
 				7E92064D25B982090074A056 /* PrefixHeader.pch */,
 			);
 			path = Macro;
+			sourceTree = "<group>";
+		};
+		7E9EAA7B25D264C1008308FF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7E92057625B9807F0074A056 /* AppDelegate.h */,
+				7E92057725B9807F0074A056 /* AppDelegate.m */,
+				7E92057925B9807F0074A056 /* SceneDelegate.h */,
+				7E92057A25B9807F0074A056 /* SceneDelegate.m */,
+				7E92057C25B9807F0074A056 /* ViewController.h */,
+				7E92057D25B9807F0074A056 /* ViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7E9EAA8225D264EB008308FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E9EAA9425D26A46008308FF /* iconfont.ttf */,
+				7E92057F25B9807F0074A056 /* Main.storyboard */,
+				7E92058225B980830074A056 /* Assets.xcassets */,
+				7E92058425B980830074A056 /* LaunchScreen.storyboard */,
+				7E92058725B980830074A056 /* Info.plist */,
+				7E92058825B980830074A056 /* main.m */,
+				7E9EAA8F25D269E0008308FF /* Images.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		82B60165061B325EB599EED2 /* Pods */ = {
@@ -527,7 +549,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E92058625B980830074A056 /* LaunchScreen.storyboard in Resources */,
+				7E9EAA9025D269E0008308FF /* Images.xcassets in Resources */,
 				7E92058325B980830074A056 /* Assets.xcassets in Resources */,
+				7E9EAA9525D26A46008308FF /* iconfont.ttf in Resources */,
 				7E92058125B9807F0074A056 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -871,7 +895,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = $SRCROOT/CustomTools/Macro/PrefixHeader.pch;
-				INFOPLIST_FILE = CustomTools/Info.plist;
+				INFOPLIST_FILE = "CustomTools/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -893,7 +917,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = $SRCROOT/CustomTools/Macro/PrefixHeader.pch;
-				INFOPLIST_FILE = CustomTools/Info.plist;
+				INFOPLIST_FILE = "CustomTools/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
