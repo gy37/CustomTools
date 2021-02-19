@@ -45,7 +45,6 @@
 		7E0F82D925D1299C0002F83E /* LiveInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0F82D625D1299C0002F83E /* LiveInfo.m */; };
 		7E92057825B9807F0074A056 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E92057725B9807F0074A056 /* AppDelegate.m */; };
 		7E92057B25B9807F0074A056 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E92057A25B9807F0074A056 /* SceneDelegate.m */; };
-		7E92057E25B9807F0074A056 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E92057D25B9807F0074A056 /* ViewController.m */; };
 		7E92058125B9807F0074A056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E92057F25B9807F0074A056 /* Main.storyboard */; };
 		7E92058325B980830074A056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E92058225B980830074A056 /* Assets.xcassets */; };
 		7E92058625B980830074A056 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E92058425B980830074A056 /* LaunchScreen.storyboard */; };
@@ -54,6 +53,12 @@
 		7E92059E25B980840074A056 /* CustomToolsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E92059D25B980840074A056 /* CustomToolsUITests.m */; };
 		7E9EAA9025D269E0008308FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E9EAA8F25D269E0008308FF /* Images.xcassets */; };
 		7E9EAA9525D26A46008308FF /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E9EAA9425D26A46008308FF /* iconfont.ttf */; };
+		7E9EAAA125D272D2008308FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9EAA9F25D272D2008308FF /* ViewController.m */; };
+		7E9EAAA725D27C51008308FF /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9EAAA625D27C51008308FF /* CustomCollectionViewCell.m */; };
+		7E9EAAAD25D285E5008308FF /* CustomCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9EAAAC25D285E5008308FF /* CustomCollectionReusableView.m */; };
+		7EDC0C2E25DDFC8500691BED /* LiveStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC0C2D25DDFC8400691BED /* LiveStreamViewController.m */; };
+		7EDC0C3725DDFDB600691BED /* KeyboardAboveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC0C3525DDFDB600691BED /* KeyboardAboveView.m */; };
+		7EDC0C7925DF5D9800691BED /* LivePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC0C7825DF5D9800691BED /* LivePlayerViewController.m */; };
 		EB88581688BBDB2E9FEADA06 /* Pods_CustomTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C333F621EA88C6789AB4DE28 /* Pods_CustomTools.framework */; };
 /* End PBXBuildFile section */
 
@@ -152,8 +157,6 @@
 		7E92057725B9807F0074A056 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7E92057925B9807F0074A056 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		7E92057A25B9807F0074A056 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		7E92057C25B9807F0074A056 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7E92057D25B9807F0074A056 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7E92058025B9807F0074A056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E92058225B980830074A056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E92058525B980830074A056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -171,6 +174,18 @@
 		7E92064D25B982090074A056 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		7E9EAA8F25D269E0008308FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7E9EAA9425D26A46008308FF /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		7E9EAA9F25D272D2008308FF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7E9EAAA025D272D2008308FF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7E9EAAA525D27C51008308FF /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		7E9EAAA625D27C51008308FF /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
+		7E9EAAAB25D285E5008308FF /* CustomCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCollectionReusableView.h; sourceTree = "<group>"; };
+		7E9EAAAC25D285E5008308FF /* CustomCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionReusableView.m; sourceTree = "<group>"; };
+		7EDC0C2C25DDFC8400691BED /* LiveStreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveStreamViewController.h; sourceTree = "<group>"; };
+		7EDC0C2D25DDFC8400691BED /* LiveStreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveStreamViewController.m; sourceTree = "<group>"; };
+		7EDC0C3525DDFDB600691BED /* KeyboardAboveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardAboveView.m; sourceTree = "<group>"; };
+		7EDC0C3625DDFDB600691BED /* KeyboardAboveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardAboveView.h; sourceTree = "<group>"; };
+		7EDC0C7725DF5D9800691BED /* LivePlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LivePlayerViewController.h; sourceTree = "<group>"; };
+		7EDC0C7825DF5D9800691BED /* LivePlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LivePlayerViewController.m; sourceTree = "<group>"; };
 		B98FAE62A98C4A8B8C639147 /* Pods-CustomTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTools.release.xcconfig"; path = "Target Support Files/Pods-CustomTools/Pods-CustomTools.release.xcconfig"; sourceTree = "<group>"; };
 		C333F621EA88C6789AB4DE28 /* Pods_CustomTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8C8321230F7BDF3B1C0692 /* Pods-CustomToolsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomToolsTests.debug.xcconfig"; path = "Target Support Files/Pods-CustomToolsTests/Pods-CustomToolsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -230,10 +245,10 @@
 		7E0F823B25D11FE70002F83E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7E0F824225D11FE70002F83E /* CustomCameraViewController.h */,
-				7E0F823D25D11FE70002F83E /* CustomCameraViewController.m */,
 				7E0F824425D11FE70002F83E /* BaseViewController.h */,
 				7E0F823E25D11FE70002F83E /* BaseViewController.m */,
+				7E0F824225D11FE70002F83E /* CustomCameraViewController.h */,
+				7E0F823D25D11FE70002F83E /* CustomCameraViewController.m */,
 				7E0F823C25D11FE70002F83E /* CustomImagePreviewViewController.h */,
 				7E0F824125D11FE70002F83E /* CustomImagePreviewViewController.m */,
 				7E0F824325D11FE70002F83E /* CustomVideoPlayerViewController.h */,
@@ -408,8 +423,13 @@
 				7E92057725B9807F0074A056 /* AppDelegate.m */,
 				7E92057925B9807F0074A056 /* SceneDelegate.h */,
 				7E92057A25B9807F0074A056 /* SceneDelegate.m */,
-				7E92057C25B9807F0074A056 /* ViewController.h */,
-				7E92057D25B9807F0074A056 /* ViewController.m */,
+				7E9EAAA025D272D2008308FF /* ViewController.h */,
+				7E9EAA9F25D272D2008308FF /* ViewController.m */,
+				7EDC0C7D25DF5DAA00691BED /* View */,
+				7E9EAAC825D390A4008308FF /* WMYLINK */,
+				7E9EAACF25D39117008308FF /* BTCARD */,
+				7E9EAACE25D390FD008308FF /* LECAI */,
+				7E9EAAD025D3914F008308FF /* WMYCLOUD */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -426,6 +446,51 @@
 				7E9EAA8F25D269E0008308FF /* Images.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7E9EAAC825D390A4008308FF /* WMYLINK */ = {
+			isa = PBXGroup;
+			children = (
+				7EDC0C3625DDFDB600691BED /* KeyboardAboveView.h */,
+				7EDC0C3525DDFDB600691BED /* KeyboardAboveView.m */,
+				7EDC0C2C25DDFC8400691BED /* LiveStreamViewController.h */,
+				7EDC0C2D25DDFC8400691BED /* LiveStreamViewController.m */,
+				7EDC0C7725DF5D9800691BED /* LivePlayerViewController.h */,
+				7EDC0C7825DF5D9800691BED /* LivePlayerViewController.m */,
+			);
+			path = WMYLINK;
+			sourceTree = "<group>";
+		};
+		7E9EAACE25D390FD008308FF /* LECAI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LECAI;
+			sourceTree = "<group>";
+		};
+		7E9EAACF25D39117008308FF /* BTCARD */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BTCARD;
+			sourceTree = "<group>";
+		};
+		7E9EAAD025D3914F008308FF /* WMYCLOUD */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WMYCLOUD;
+			sourceTree = "<group>";
+		};
+		7EDC0C7D25DF5DAA00691BED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E9EAAA525D27C51008308FF /* CustomCollectionViewCell.h */,
+				7E9EAAA625D27C51008308FF /* CustomCollectionViewCell.m */,
+				7E9EAAAB25D285E5008308FF /* CustomCollectionReusableView.h */,
+				7E9EAAAC25D285E5008308FF /* CustomCollectionReusableView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		82B60165061B325EB599EED2 /* Pods */ = {
@@ -509,6 +574,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = yuyuyu;
 				TargetAttributes = {
 					7E92057225B9807F0074A056 = {
 						CreatedOnToolsVersion = 12.0.1;
@@ -681,18 +747,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E0F828625D11FE70002F83E /* CustomActionSheet.m in Sources */,
+				7EDC0C3725DDFDB600691BED /* KeyboardAboveView.m in Sources */,
 				7E0F82D025D1297A0002F83E /* ChannelInfo.m in Sources */,
 				7E0F828F25D11FE70002F83E /* WeChatManager.m in Sources */,
+				7E9EAAA725D27C51008308FF /* CustomCollectionViewCell.m in Sources */,
+				7EDC0C2E25DDFC8500691BED /* LiveStreamViewController.m in Sources */,
 				7E0F827C25D11FE70002F83E /* CustomCameraViewController.m in Sources */,
 				7E0F828E25D11FE70002F83E /* LiveManager.m in Sources */,
 				7E0F828825D11FE70002F83E /* CustomSTOMPClient.m in Sources */,
 				7E0F829725D11FE70002F83E /* UIFont+Custom.m in Sources */,
 				7E0F828D25D11FE70002F83E /* StorageTool.m in Sources */,
+				7E9EAAA125D272D2008308FF /* ViewController.m in Sources */,
 				7E0F828325D11FE70002F83E /* CustomSheetContentView.m in Sources */,
 				7E0F828B25D11FE70002F83E /* NetWorkTool.m in Sources */,
 				7E0F827D25D11FE70002F83E /* BaseViewController.m in Sources */,
 				7E0F828125D11FE70002F83E /* CustomGuideView.m in Sources */,
-				7E92057E25B9807F0074A056 /* ViewController.m in Sources */,
+				7E9EAAAD25D285E5008308FF /* CustomCollectionReusableView.m in Sources */,
 				7E0F828C25D11FE70002F83E /* OpenInstallManager.m in Sources */,
 				7E0F827E25D11FE70002F83E /* CustomVideoPlayerViewController.m in Sources */,
 				7E0F827F25D11FE70002F83E /* CustomImagePreviewViewController.m in Sources */,
@@ -701,6 +771,7 @@
 				7E92058925B980830074A056 /* main.m in Sources */,
 				7E0F82D825D1299C0002F83E /* LiveModel.m in Sources */,
 				7E0F828225D11FE70002F83E /* CustomResultContentView.m in Sources */,
+				7EDC0C7925DF5D9800691BED /* LivePlayerViewController.m in Sources */,
 				7E0F828925D11FE70002F83E /* CustomImagePickerController.m in Sources */,
 				7E0F829925D11FE70002F83E /* NSObject+Custom.m in Sources */,
 				7E0F82D925D1299C0002F83E /* LiveInfo.m in Sources */,

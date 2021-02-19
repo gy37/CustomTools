@@ -38,7 +38,9 @@ target 'CustomTools' do
   pod 'WechatOpenSDK', '~> 1.8.6'#需要配置universallink
   # openinstall
   pod 'libOpenInstallSDK', '~> 2.5.0'
-  
+  #阿里播放器
+  pod 'AliPlayerSDK_iOS', '~> 5.3.0'
+
   target 'CustomToolsTests' do
     inherit! :search_paths
     # Pods for testing

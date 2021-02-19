@@ -98,7 +98,7 @@ const NSInteger itemButtonTag = 10000;
     [imagePickerController setImagePickerControllerDidCancelHandle:^{
             
     }];
-    [self presentViewController:imagePickerController animated:YES completion:nil];
+    [self presentViewController:imagePickerController animated:YES completion:NULL];
 }
 
 - (void)showImagePickerAndPickVideo:(VideoPickerCompletion)pickVideo cancel:(SimpleBlock)cancel {
@@ -119,7 +119,7 @@ const NSInteger itemButtonTag = 10000;
             NSLog(@"视频导出失败:%@,error:%@",errorMessage, error);
         }];
     }];
-    [self presentViewController:imagePickerController animated:NO completion:nil];
+    [self presentViewController:imagePickerController animated:YES completion:NULL];
 }
 
 #pragma mark - navigation bar

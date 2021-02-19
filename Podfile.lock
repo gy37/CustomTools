@@ -15,6 +15,9 @@ PODS:
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - AliLiveSDK_iOS (4.0.2)
+  - AliPlayerSDK_iOS (5.3.1):
+    - AliPlayerSDK_iOS/AliPlayerSDK (= 5.3.1)
+  - AliPlayerSDK_iOS/AliPlayerSDK (5.3.1)
   - AliyunOSSiOS (2.10.8)
   - GMObjC (3.1.2):
     - GMOpenSSL
@@ -37,6 +40,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 4.0.1)
   - AliLiveSDK_iOS (~> 4.0.2)
+  - AliPlayerSDK_iOS (~> 5.3.0)
   - GMObjC (~> 3.1.2)
   - GMOpenSSL (= 2.0.3)
   - libOpenInstallSDK (~> 2.5.0)
@@ -53,6 +57,7 @@ SPEC REPOS:
   trunk:
     - AFNetworking
     - AliLiveSDK_iOS
+    - AliPlayerSDK_iOS
     - AliyunOSSiOS
     - GMObjC
     - GMOpenSSL
@@ -78,6 +83,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   AliLiveSDK_iOS: e4f44cffb860086fd75b662da0cf9994275172d6
+  AliPlayerSDK_iOS: 122ba2f5a32d64ae89e19bdb58859875e248cdce
   AliyunOSSiOS: 8db92936545593b9e5c66d680ef2ac0738946651
   GMObjC: 19aec07bbfcde3d41e00afbea224efa89cab9ba7
   GMOpenSSL: 614ac2fff9bbeb1008a8b1eb624e7952ecc85220
@@ -92,6 +98,6 @@ SPEC CHECKSUMS:
   WebsocketStompKit: 31de925ffc7094b569dedcd4a9a4838e649e0860
   WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
 
-PODFILE CHECKSUM: c8100c90ead7ecf8bd5c098f980c29b2f56d4793
+PODFILE CHECKSUM: b6c7d8ebdac3a3968011b06cefc131e2ce386829
 
 COCOAPODS: 1.10.0.rc.1
