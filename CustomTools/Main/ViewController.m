@@ -11,6 +11,7 @@
 #import "CustomCollectionReusableView.h"
 #import "LiveStreamViewController.h"
 #import "LivePlayerViewController.h"
+#import "AudioViewController.h"
 
 @interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (strong, nonatomic) UICollectionView *mainCollectionView;
@@ -58,7 +59,12 @@
                 @"选择视频（基于TZImagePickerController，实现自定义选择页面，拍照，视频拍摄页面）",
                 @"开始直播（使用AliLiveSDK_iOS实现推流）",
                 @"观看直播（使用AliPlayer_iOS实现直播播放）"
-            ]
+            ],
+        @"WMYCLOUD": @[
+                @"录音，音频格式转换，上传到服务器",
+                @"WKWebView与原生页面交互",
+                @"引导页，滑动切换引导页，点击立即体验进入App"
+        ]
     };
 }
 
@@ -93,6 +99,11 @@
     [self presentViewController:player animated:YES completion:NULL];
 }
 
+- (void)recordAudio {
+    AudioViewController *controller = (AudioViewController *)ViewControllerInStoryboard(NSStringFromClass([AudioViewController class]));
+    [self presentViewController:controller animated:YES completion:NULL];
+}
+
 #pragma mark - UICollectionViewDelegate & UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -114,10 +125,11 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        if (indexPath.item == 0 || indexPath.item == 1) {
-            return CGSizeMake(COMMON_SCREEN_WIDTH - 8 * 2, 100);
-        }
+    if (indexPath.section == 0 && (indexPath.item == 0 || indexPath.item == 1)) {
+        return CGSizeMake(COMMON_SCREEN_WIDTH - 8 * 2, 100);
+    }
+    if (indexPath.section == 1 && indexPath.item == 2) {
+        return CGSizeMake(COMMON_SCREEN_WIDTH - 8 * 2, 100);
     }
     return CGSizeMake((COMMON_SCREEN_WIDTH - 8 * 3) / 2.0, 100);
 }
@@ -138,6 +150,14 @@
             [self startLive];
         } else if (indexPath.item == 3) {
             [self watchLive];
+        }
+    } else if (indexPath.section == 1) {
+        if (indexPath.item == 0) {
+            [self recordAudio];
+        } else if (indexPath.item == 1) {
+
+        } else if (indexPath.item == 2) {
+
         }
     }
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];

@@ -517,6 +517,62 @@
             </objects>
             <point key="canvasLocation" x="2052" y="751"/>
         </scene>
+        <!--Audio View Controller-->
+        <scene sceneID="aXU-Ka-Bhn">
+            <objects>
+                <viewController storyboardIdentifier="AudioViewController" id="TQX-ce-AlH" customClass="AudioViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Mo-Qp-WDQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lP-Yj-Lyx">
+                                <rect key="frame" x="20" y="104" width="62" height="30"/>
+                                <state key="normal" title="开始录音"/>
+                                <connections>
+                                    <action selector="handleRecord:" destination="TQX-ce-AlH" eventType="touchUpInside" id="4CB-yD-7Ia"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVr-cr-gb0">
+                                <rect key="frame" x="332" y="104" width="62" height="30"/>
+                                <state key="normal" title="停止录音"/>
+                                <connections>
+                                    <action selector="handleRecord:" destination="TQX-ce-AlH" eventType="touchUpInside" id="coO-dx-yxa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9M-B5-ySe">
+                                <rect key="frame" x="20" y="194" width="92" height="30"/>
+                                <state key="normal" title="开始播放录音"/>
+                                <connections>
+                                    <action selector="handleRecord:" destination="TQX-ce-AlH" eventType="touchUpInside" id="V7r-F0-ba2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CW3-PK-7O8">
+                                <rect key="frame" x="302" y="194" width="92" height="30"/>
+                                <state key="normal" title="停止播放录音"/>
+                                <connections>
+                                    <action selector="handleRecord:" destination="TQX-ce-AlH" eventType="touchUpInside" id="ViE-fr-rsr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fk2-Yh-LMn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1lP-Yj-Lyx" firstAttribute="leading" secondItem="Fk2-Yh-LMn" secondAttribute="leading" constant="20" id="3Xc-pe-Og4"/>
+                            <constraint firstItem="g9M-B5-ySe" firstAttribute="leading" secondItem="Fk2-Yh-LMn" secondAttribute="leading" constant="20" id="6vX-PA-J99"/>
+                            <constraint firstItem="g9M-B5-ySe" firstAttribute="top" secondItem="1lP-Yj-Lyx" secondAttribute="bottom" constant="60" id="CLr-Z3-gt1"/>
+                            <constraint firstItem="CW3-PK-7O8" firstAttribute="top" secondItem="hVr-cr-gb0" secondAttribute="bottom" constant="60" id="MoT-g6-Tl7"/>
+                            <constraint firstItem="1lP-Yj-Lyx" firstAttribute="top" secondItem="Fk2-Yh-LMn" secondAttribute="top" constant="60" id="OjK-Qm-PZ6"/>
+                            <constraint firstItem="Fk2-Yh-LMn" firstAttribute="trailing" secondItem="CW3-PK-7O8" secondAttribute="trailing" constant="20" id="TkU-9y-8pV"/>
+                            <constraint firstItem="hVr-cr-gb0" firstAttribute="top" secondItem="Fk2-Yh-LMn" secondAttribute="top" constant="60" id="bW3-zs-iG8"/>
+                            <constraint firstItem="Fk2-Yh-LMn" firstAttribute="trailing" secondItem="hVr-cr-gb0" secondAttribute="trailing" constant="20" id="pyG-gP-DZb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QJc-pU-dlS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btd-Vd-AFD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="61"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

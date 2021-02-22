@@ -12,9 +12,11 @@
 
 #import <VODUpload/VODUploadClient.h>
 #import <VODUpload/VODUploadModel.h>
+#import <AliyunOSSiOS/OSSService.h>
 
 @interface UploadManager()
 @property (strong, nonatomic) VODUploadClient *uploadClient;
+@property (strong, nonatomic) OSSClient *ossClient;
 
 @end
 @implementation UploadManager
@@ -115,6 +117,73 @@ static UploadManager *manager;
     });
 }
 
+- (void)uploadAudioFile:(NSString *)filePath complete:(nonnull void (^)(NSString *url))complete {
+    NSFileManager *manager = [NSFileManager defaultManager];
+    long long fileSize = [[manager attributesOfItemAtPath:filePath error:nil][NSFileSize] longLongValue];
+    [NetWorkTool getUrlPath:[NSString stringWithFormat:@"%@/aliyun/upload/policy", BASE_URL] parameters:@{@"t": [NSString getCurrentMillisecond]} success:^(NSDictionary * _Nonnull response) {
+        NSLog(@"%@", response);
+        if ([response[@"code"] integerValue] == 1000) {
+            NSData *data = [[response[@"data"] stringByReplacingOccurrencesOfString:@"\\" withString:@""] dataUsingEncoding:NSUTF8StringEncoding];
+            NSDictionary *dataDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            NSString *fileName = [NSString stringWithFormat:@"%@/%@%lld.mp3", dataDict[@"dir"], [NSString getCurrentMillisecond], fileSize];
+            NSLog(@"%@", fileName);
+            NSDictionary *parameters = @{
+                @"Filename": fileName,
+                @"key": fileName,
+                @"policy": dataDict[@"policy"],
+                @"OSSAccessKeyId": dataDict[@"accessid"],
+                @"signature": dataDict[@"signature"],
+                @"success_action_status": @(200)
+            };
+            [NetWorkTool uploadFileToPath:dataDict[@"host"] parameters:parameters file:filePath mimeType:@"audio/mpeg3" success:^(NSDictionary * _Nonnull response) {
+                NSLog(@"%@", response);
+                NSString *url = [NSString stringWithFormat:@"%@/%@", dataDict[@"host"], fileName];
+                NSLog(@"%@", url);
+            } failed:^(NSError * _Nonnull error) {
+                NSLog(@"error: %@", error);
+            }];
+        }
+    } failed:^(NSError * _Nonnull error) {
+        NSLog(@"error: %@", error);
+    }];
+}
 
+
+- (void)setupClient {
+    NSString *endpoint = @"https://oss-cn-hangzhou.aliyuncs.com";
+
+    // 移动端建议使用STS方式初始化OSSClient。
+//    id<OSSCredentialProvider> credential = [[OSSStsTokenCredentialProvider alloc] initWithAccessKeyId:@"AccessKeyId" secretKeyId:@"AccessKeySecret" securityToken:@"SecurityToken"];
+    id<OSSCredentialProvider> credential = [[OSSAuthCredentialProvider alloc] initWithAuthServerUrl:@"https://oss-cn-hangzhou.aliyuncs.com"];
+    self.ossClient = [[OSSClient alloc] initWithEndpoint:endpoint credentialProvider:credential];
+}
+
+- (void)uploadFileThroughOSS:(NSString *)filePath {
+    NSLog(@"上传文件");
+    if (!self.ossClient) {
+        [self setupClient];
+    }
+    OSSPutObjectRequest * put = [OSSPutObjectRequest new];
+    put.bucketName = @"test";
+    //objectKey等同于objectName，表示上传文件到OSS时需要指定包含文件后缀在内的完整路径，例如abc/efg/123.jpg。
+    put.objectKey = filePath;
+    // 直接上传NSData。
+//    put.uploadingData = [NSData dataWithContentsOfFile:filePath];
+    put.uploadingFileURL = [NSURL fileURLWithPath:filePath];
+    put.uploadProgress = ^(int64_t bytesSent, int64_t totalByteSent, int64_t totalBytesExpectedToSend) {
+        NSLog(@"%lld, %lld, %lld", bytesSent, totalByteSent, totalBytesExpectedToSend);
+    };
+    OSSTask * putTask = [self.ossClient putObject:put];
+    [putTask continueWithBlock:^id(OSSTask *task) {
+        if (!task.error) {
+            NSLog(@"upload object success!");
+        } else {
+            NSLog(@"upload object failed, error: %@" , task.error);
+        }
+        return nil;
+    }];
+    // 等待任务完成。
+     [putTask waitUntilFinished];
+}
 
 @end

@@ -59,6 +59,9 @@
 		7EDC0C2E25DDFC8500691BED /* LiveStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC0C2D25DDFC8400691BED /* LiveStreamViewController.m */; };
 		7EDC0C3725DDFDB600691BED /* KeyboardAboveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC0C3525DDFDB600691BED /* KeyboardAboveView.m */; };
 		7EDC0C7925DF5D9800691BED /* LivePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC0C7825DF5D9800691BED /* LivePlayerViewController.m */; };
+		7EDC0C8925E394B000691BED /* AudioRecordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC0C8825E394AF00691BED /* AudioRecordManager.m */; };
+		7EDC0C8F25E3955B00691BED /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDC0C8E25E3955B00691BED /* libmp3lame.a */; };
+		7EDC0C9B25E39C0900691BED /* AudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC0C9A25E39C0900691BED /* AudioViewController.m */; };
 		EB88581688BBDB2E9FEADA06 /* Pods_CustomTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C333F621EA88C6789AB4DE28 /* Pods_CustomTools.framework */; };
 /* End PBXBuildFile section */
 
@@ -186,6 +189,12 @@
 		7EDC0C3625DDFDB600691BED /* KeyboardAboveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardAboveView.h; sourceTree = "<group>"; };
 		7EDC0C7725DF5D9800691BED /* LivePlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LivePlayerViewController.h; sourceTree = "<group>"; };
 		7EDC0C7825DF5D9800691BED /* LivePlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LivePlayerViewController.m; sourceTree = "<group>"; };
+		7EDC0C8725E394AF00691BED /* AudioRecordManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioRecordManager.h; sourceTree = "<group>"; };
+		7EDC0C8825E394AF00691BED /* AudioRecordManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioRecordManager.m; sourceTree = "<group>"; };
+		7EDC0C8D25E3955B00691BED /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		7EDC0C8E25E3955B00691BED /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		7EDC0C9925E39C0900691BED /* AudioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioViewController.h; sourceTree = "<group>"; };
+		7EDC0C9A25E39C0900691BED /* AudioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioViewController.m; sourceTree = "<group>"; };
 		B98FAE62A98C4A8B8C639147 /* Pods-CustomTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTools.release.xcconfig"; path = "Target Support Files/Pods-CustomTools/Pods-CustomTools.release.xcconfig"; sourceTree = "<group>"; };
 		C333F621EA88C6789AB4DE28 /* Pods_CustomTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8C8321230F7BDF3B1C0692 /* Pods-CustomToolsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomToolsTests.debug.xcconfig"; path = "Target Support Files/Pods-CustomToolsTests/Pods-CustomToolsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB88581688BBDB2E9FEADA06 /* Pods_CustomTools.framework in Frameworks */,
+				7EDC0C8F25E3955B00691BED /* libmp3lame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +293,8 @@
 		7E0F825525D11FE70002F83E /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				7EDC0C8D25E3955B00691BED /* lame.h */,
+				7EDC0C8E25E3955B00691BED /* libmp3lame.a */,
 				7E0F825925D11FE70002F83E /* CustomSTOMPClient.h */,
 				7E0F825625D11FE70002F83E /* CustomSTOMPClient.m */,
 				7E0F825725D11FE70002F83E /* CustomImagePickerController.h */,
@@ -308,6 +320,8 @@
 				7E0F825C25D11FE70002F83E /* WebSocketManager.m */,
 				7E0F826125D11FE70002F83E /* UploadManager.h */,
 				7E0F826725D11FE70002F83E /* UploadManager.m */,
+				7EDC0C8725E394AF00691BED /* AudioRecordManager.h */,
+				7EDC0C8825E394AF00691BED /* AudioRecordManager.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -427,9 +441,9 @@
 				7E9EAA9F25D272D2008308FF /* ViewController.m */,
 				7EDC0C7D25DF5DAA00691BED /* View */,
 				7E9EAAC825D390A4008308FF /* WMYLINK */,
+				7E9EAAD025D3914F008308FF /* WMYCLOUD */,
 				7E9EAACF25D39117008308FF /* BTCARD */,
 				7E9EAACE25D390FD008308FF /* LECAI */,
-				7E9EAAD025D3914F008308FF /* WMYCLOUD */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -478,6 +492,8 @@
 		7E9EAAD025D3914F008308FF /* WMYCLOUD */ = {
 			isa = PBXGroup;
 			children = (
+				7EDC0C9925E39C0900691BED /* AudioViewController.h */,
+				7EDC0C9A25E39C0900691BED /* AudioViewController.m */,
 			);
 			path = WMYCLOUD;
 			sourceTree = "<group>";
@@ -764,7 +780,9 @@
 				7E0F828125D11FE70002F83E /* CustomGuideView.m in Sources */,
 				7E9EAAAD25D285E5008308FF /* CustomCollectionReusableView.m in Sources */,
 				7E0F828C25D11FE70002F83E /* OpenInstallManager.m in Sources */,
+				7EDC0C8925E394B000691BED /* AudioRecordManager.m in Sources */,
 				7E0F827E25D11FE70002F83E /* CustomVideoPlayerViewController.m in Sources */,
+				7EDC0C9B25E39C0900691BED /* AudioViewController.m in Sources */,
 				7E0F827F25D11FE70002F83E /* CustomImagePreviewViewController.m in Sources */,
 				7E0F829325D11FE70002F83E /* UISearchBar+Custom.m in Sources */,
 				7E92057825B9807F0074A056 /* AppDelegate.m in Sources */,
@@ -971,6 +989,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CustomTools/Common/Third\\ Party",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yizhi.CustomTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -992,6 +1014,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CustomTools/Common/Third\\ Party",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yizhi.CustomTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";

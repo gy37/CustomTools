@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)sharedManager;
 - (void)uploadVideo:(VideoInfo *)video withAddress:(NSString *)address andAuth:(NSString *)auth completion:(SimpleBlock)block;
 - (void)uploadImage:(NSString *)imagePath withAddress:(NSString *)address andAuth:(NSString *)auth completion:(SimpleBlock)block;
+- (void)uploadAudioFile:(NSString *)filePath complete:(void (^)(NSString *url))complete;
+
+- (void)uploadFileThroughOSS:(NSString *)filePath;
 @end
 
 NS_ASSUME_NONNULL_END
