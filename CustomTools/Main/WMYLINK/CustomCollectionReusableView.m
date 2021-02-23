@@ -1,21 +1,15 @@
 //
-//  CustomCollectionViewCell.m
+//  CustomCollectionReusableView.m
 //  CustomTools
 //
 //  Created by yuyuyu on 2021/2/9.
 //  Copyright © 2021 yuyuyu. All rights reserved.
 //
 
-#import "CustomCollectionViewCell.h"
+#import "CustomCollectionReusableView.h"
 #import <Masonry.h>
 
-@implementation CustomCollectionViewCell
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-
-    [self setupSubviews];
-}
+@implementation CustomCollectionReusableView
 
 - (instancetype)init {
     self = [super init];
@@ -34,9 +28,7 @@
 }
 
 - (void)setupSubviews {
-    self.backgroundColor = THEME_COLOR;
-//    self.layer.borderColor = [UIColor redColor].CGColor;
-//    self.layer.borderWidth = 1.0;
+//    self.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.7];
     
     [self addSubview:self.contentLabel];
     [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -49,8 +41,8 @@
     if (!_contentLabel) {
         _contentLabel = [[UILabel alloc] init];
         _contentLabel.font = [UIFont systemFontOfSize:13];
-        _contentLabel.textColor = [UIColor whiteColor];
-        _contentLabel.numberOfLines = 2;
+        _contentLabel.textColor = [UIColor blackColor];
+        _contentLabel.numberOfLines = 1;
     }
     return _contentLabel;
 }

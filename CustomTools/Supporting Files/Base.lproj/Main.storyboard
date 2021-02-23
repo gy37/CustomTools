@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dDe-Xu-gd1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -19,10 +19,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="BQk-gN-Xg7"/>
+                    <connections>
+                        <segue destination="TQX-ce-AlH" kind="show" identifier="toAudioRecord" id="1hI-Tb-hdW"/>
+                        <segue destination="CzB-I9-kbN" kind="show" identifier="toWebView" id="59u-vX-itx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="60.9375"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="60.9375"/>
         </scene>
         <!--Custom Video Player View Controller-->
         <scene sceneID="Gvu-Gd-Xgd">
@@ -526,28 +531,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lP-Yj-Lyx">
-                                <rect key="frame" x="20" y="104" width="62" height="30"/>
+                                <rect key="frame" x="20" y="148" width="62" height="30"/>
                                 <state key="normal" title="开始录音"/>
                                 <connections>
                                     <action selector="handleRecord:" destination="TQX-ce-AlH" eventType="touchUpInside" id="4CB-yD-7Ia"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVr-cr-gb0">
-                                <rect key="frame" x="332" y="104" width="62" height="30"/>
+                                <rect key="frame" x="332" y="148" width="62" height="30"/>
                                 <state key="normal" title="停止录音"/>
                                 <connections>
                                     <action selector="handleRecord:" destination="TQX-ce-AlH" eventType="touchUpInside" id="coO-dx-yxa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9M-B5-ySe">
-                                <rect key="frame" x="20" y="194" width="92" height="30"/>
+                                <rect key="frame" x="20" y="238" width="92" height="30"/>
                                 <state key="normal" title="开始播放录音"/>
                                 <connections>
                                     <action selector="handleRecord:" destination="TQX-ce-AlH" eventType="touchUpInside" id="V7r-F0-ba2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CW3-PK-7O8">
-                                <rect key="frame" x="302" y="194" width="92" height="30"/>
+                                <rect key="frame" x="302" y="238" width="92" height="30"/>
                                 <state key="normal" title="停止播放录音"/>
                                 <connections>
                                     <action selector="handleRecord:" destination="TQX-ce-AlH" eventType="touchUpInside" id="ViE-fr-rsr"/>
@@ -561,9 +566,11 @@
                             <constraint firstItem="g9M-B5-ySe" firstAttribute="leading" secondItem="Fk2-Yh-LMn" secondAttribute="leading" constant="20" id="6vX-PA-J99"/>
                             <constraint firstItem="g9M-B5-ySe" firstAttribute="top" secondItem="1lP-Yj-Lyx" secondAttribute="bottom" constant="60" id="CLr-Z3-gt1"/>
                             <constraint firstItem="CW3-PK-7O8" firstAttribute="top" secondItem="hVr-cr-gb0" secondAttribute="bottom" constant="60" id="MoT-g6-Tl7"/>
+                            <constraint firstItem="hVr-cr-gb0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1lP-Yj-Lyx" secondAttribute="trailing" constant="8" symbolic="YES" id="NfU-tN-wNM"/>
                             <constraint firstItem="1lP-Yj-Lyx" firstAttribute="top" secondItem="Fk2-Yh-LMn" secondAttribute="top" constant="60" id="OjK-Qm-PZ6"/>
                             <constraint firstItem="Fk2-Yh-LMn" firstAttribute="trailing" secondItem="CW3-PK-7O8" secondAttribute="trailing" constant="20" id="TkU-9y-8pV"/>
                             <constraint firstItem="hVr-cr-gb0" firstAttribute="top" secondItem="Fk2-Yh-LMn" secondAttribute="top" constant="60" id="bW3-zs-iG8"/>
+                            <constraint firstItem="CW3-PK-7O8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="g9M-B5-ySe" secondAttribute="trailing" constant="8" symbolic="YES" id="oYv-s2-dt1"/>
                             <constraint firstItem="Fk2-Yh-LMn" firstAttribute="trailing" secondItem="hVr-cr-gb0" secondAttribute="trailing" constant="20" id="pyG-gP-DZb"/>
                         </constraints>
                     </view>
@@ -571,7 +578,83 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btd-Vd-AFD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="61"/>
+            <point key="canvasLocation" x="1737.68115942029" y="60.9375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W1S-L6-Mic">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dDe-Xu-gd1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sRU-tv-95X">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="JOL-Di-8s7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y7W-GT-xDC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="60.9375"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="mT0-vn-xWS">
+            <objects>
+                <viewController id="CzB-I9-kbN" customClass="WebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BI9-NM-TRA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1n-ON-z4y">
+                                <rect key="frame" x="20" y="158.5" width="374" height="30"/>
+                                <state key="normal" title="普通html页面"/>
+                                <connections>
+                                    <action selector="jsInHtml:" destination="CzB-I9-kbN" eventType="touchUpInside" id="qig-U7-3DY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7p-Iu-o9m">
+                                <rect key="frame" x="20" y="218.5" width="374" height="30"/>
+                                <state key="normal" title="React，Vue组件"/>
+                                <connections>
+                                    <action selector="jsInComponent:" destination="CzB-I9-kbN" eventType="touchUpInside" id="tXD-Es-rHZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykV-wc-Irp">
+                                <rect key="frame" x="20" y="278.5" width="374" height="30"/>
+                                <state key="normal" title="直接调用系统js方法"/>
+                                <connections>
+                                    <action selector="originJs:" destination="CzB-I9-kbN" eventType="touchUpInside" id="aMU-HK-je0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="原生调用js" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYw-Ir-DoB">
+                                <rect key="frame" x="20" y="108" width="82" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9VV-ed-Z30"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NYw-Ir-DoB" firstAttribute="top" secondItem="9VV-ed-Z30" secondAttribute="top" constant="20" id="5Jq-RJ-KDX"/>
+                            <constraint firstItem="9VV-ed-Z30" firstAttribute="trailing" secondItem="L1n-ON-z4y" secondAttribute="trailing" constant="20" id="6fW-gl-X0k"/>
+                            <constraint firstItem="9VV-ed-Z30" firstAttribute="trailing" secondItem="I7p-Iu-o9m" secondAttribute="trailing" constant="20" id="9Iq-1N-2xi"/>
+                            <constraint firstItem="9VV-ed-Z30" firstAttribute="trailing" secondItem="ykV-wc-Irp" secondAttribute="trailing" constant="20" id="G6A-Bw-rnW"/>
+                            <constraint firstItem="ykV-wc-Irp" firstAttribute="top" secondItem="I7p-Iu-o9m" secondAttribute="bottom" constant="30" id="GiL-Bb-0tD"/>
+                            <constraint firstItem="L1n-ON-z4y" firstAttribute="top" secondItem="NYw-Ir-DoB" secondAttribute="bottom" constant="30" id="HEK-Hs-DIi"/>
+                            <constraint firstItem="ykV-wc-Irp" firstAttribute="leading" secondItem="9VV-ed-Z30" secondAttribute="leading" constant="20" id="KL2-7v-MYZ"/>
+                            <constraint firstItem="L1n-ON-z4y" firstAttribute="leading" secondItem="9VV-ed-Z30" secondAttribute="leading" constant="20" id="pxK-Td-4oz"/>
+                            <constraint firstItem="NYw-Ir-DoB" firstAttribute="leading" secondItem="9VV-ed-Z30" secondAttribute="leading" constant="20" id="uPV-BX-O7d"/>
+                            <constraint firstItem="I7p-Iu-o9m" firstAttribute="leading" secondItem="9VV-ed-Z30" secondAttribute="leading" constant="20" id="vjD-1Q-HA0"/>
+                            <constraint firstItem="I7p-Iu-o9m" firstAttribute="top" secondItem="L1n-ON-z4y" secondAttribute="bottom" constant="30" id="yCU-lb-e90"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jFF-ba-69F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1S-co-5IN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479.7101449275365" y="60.9375"/>
         </scene>
     </scenes>
     <resources>

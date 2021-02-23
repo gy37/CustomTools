@@ -14,6 +14,7 @@
 #define COMMON_SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define COMMON_SCREEN_SCALE [UIScreen mainScreen].scale
 #define COMMON_STATUS_BAR_HEIGHT [UIApplication sharedApplication].statusBarFrame.size.height
+#define COMMON_NAVIGATION_BAR_HEIGHT (COMMON_STATUS_BAR_HEIGHT + 44)
 #define COMMON_SAFE_AREA_BOTTOM_HEIGHT ({\
 CGFloat height = 0;\
 if (@available(iOS 11.0, *)) {\

@@ -89,7 +89,8 @@
         CGFloat height = self.backgroundScrollView.frame.size.height;
         CGFloat x = i * self.backgroundScrollView.frame.size.width;
         imageView.frame = CGRectMake(x, 0, width, height);
-        imageView.image = [UIImage imageWithContentsOfFile:images[i]];
+//        imageView.image = [UIImage imageWithContentsOfFile:images[i]];
+        imageView.image = [UIImage imageNamed:images[i]];
         [self.backgroundScrollView addSubview:imageView];
     }
 }

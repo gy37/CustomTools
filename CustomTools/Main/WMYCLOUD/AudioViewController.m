@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.navigationItem.title = @"录音和播放";
 }
 - (IBAction)handleRecord:(UIButton *)sender {
     [self startRecord:sender.tag];

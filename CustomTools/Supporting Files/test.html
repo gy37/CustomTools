@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>测试测试测试</title>
+  <style type="text/css">
+    #content {
+      margin: 0;
+      border: 1px solid green;
+    }
+    .test {
+      width: 100%;
+      height: 100px;
+      background-color: green;
+      color: white;
+      border: 1px solid red;
+    }
+  </style>
+  <script type="text/javascript">
+    function changeBgColor(color) {
+      var div = document.getElementsByClassName('test')[0];
+      div.style.backgroundColor = color;
+      div.innerHTML = '调用js方法修改div背景颜色为：' + color;
+    }
+    function functionInComponent() {
+      var div = document.getElementsByClassName('test')[0];
+      div.innerHTML = '原生调用vue或react中的js方法，需要在componentDidMount方法中绑定事件到window上，原生才可以调用';
+    }
+    // 原生调用vue或react中的js方法，需要在componentDidMount方法中绑定事件到window上，原生才可以调用
+    // componentDidMount() {
+    //     // ios android 调用js 上传录音
+    //     window.iosAndroiduploadFile = this.iosAndroiduploadFile.bind(this);
+    // }
+    function getSession() {
+      var enable = sessionStorage.getItem('isAPPEnableSign');
+      var div = document.getElementsByClassName('test')[0];
+      div.innerHTML = '获取sessionStorage中的isAPPEnableSign的值为：' + enable;
+    }
+    function callNative() {
+      //无参数时，需要传null，否则iOS端收不到消息
+      window.webkit.messageHandlers.changeUIViewColor.postMessage(null);
+    }
+  </script>
+</head>
+<body>
+  <div id="content">
+    <div class="test">Test Test Test</div>
+    <button onclick="getSession()">获取isAPPEnableSign</button>
+    <button onclick="callNative()">修改ViewController背景颜色</button>
+  </div>
+</body>
+</html>

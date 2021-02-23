@@ -62,6 +62,12 @@
 		7EDC0C8925E394B000691BED /* AudioRecordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC0C8825E394AF00691BED /* AudioRecordManager.m */; };
 		7EDC0C8F25E3955B00691BED /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDC0C8E25E3955B00691BED /* libmp3lame.a */; };
 		7EDC0C9B25E39C0900691BED /* AudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC0C9A25E39C0900691BED /* AudioViewController.m */; };
+		7EDC0CA125E4900F00691BED /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDC0CA025E4900E00691BED /* WebViewController.m */; };
+		7EDC0CB425E49E2B00691BED /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 7EDC0CB325E49E2B00691BED /* test.html */; };
+		7EDC0CBF25E4A8FA00691BED /* guide_04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EDC0CBB25E4A8F900691BED /* guide_04.jpg */; };
+		7EDC0CC025E4A8FA00691BED /* guide_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EDC0CBC25E4A8F900691BED /* guide_01.jpg */; };
+		7EDC0CC125E4A8FA00691BED /* guide_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EDC0CBD25E4A8FA00691BED /* guide_03.jpg */; };
+		7EDC0CC225E4A8FA00691BED /* guide_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EDC0CBE25E4A8FA00691BED /* guide_02.jpg */; };
 		EB88581688BBDB2E9FEADA06 /* Pods_CustomTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C333F621EA88C6789AB4DE28 /* Pods_CustomTools.framework */; };
 /* End PBXBuildFile section */
 
@@ -195,6 +201,13 @@
 		7EDC0C8E25E3955B00691BED /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 		7EDC0C9925E39C0900691BED /* AudioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioViewController.h; sourceTree = "<group>"; };
 		7EDC0C9A25E39C0900691BED /* AudioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioViewController.m; sourceTree = "<group>"; };
+		7EDC0C9F25E4900E00691BED /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		7EDC0CA025E4900E00691BED /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		7EDC0CB325E49E2B00691BED /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		7EDC0CBB25E4A8F900691BED /* guide_04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_04.jpg; sourceTree = "<group>"; };
+		7EDC0CBC25E4A8F900691BED /* guide_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_01.jpg; sourceTree = "<group>"; };
+		7EDC0CBD25E4A8FA00691BED /* guide_03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_03.jpg; sourceTree = "<group>"; };
+		7EDC0CBE25E4A8FA00691BED /* guide_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_02.jpg; sourceTree = "<group>"; };
 		B98FAE62A98C4A8B8C639147 /* Pods-CustomTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTools.release.xcconfig"; path = "Target Support Files/Pods-CustomTools/Pods-CustomTools.release.xcconfig"; sourceTree = "<group>"; };
 		C333F621EA88C6789AB4DE28 /* Pods_CustomTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8C8321230F7BDF3B1C0692 /* Pods-CustomToolsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomToolsTests.debug.xcconfig"; path = "Target Support Files/Pods-CustomToolsTests/Pods-CustomToolsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -439,11 +452,11 @@
 				7E92057A25B9807F0074A056 /* SceneDelegate.m */,
 				7E9EAAA025D272D2008308FF /* ViewController.h */,
 				7E9EAA9F25D272D2008308FF /* ViewController.m */,
-				7EDC0C7D25DF5DAA00691BED /* View */,
 				7E9EAAC825D390A4008308FF /* WMYLINK */,
 				7E9EAAD025D3914F008308FF /* WMYCLOUD */,
 				7E9EAACF25D39117008308FF /* BTCARD */,
 				7E9EAACE25D390FD008308FF /* LECAI */,
+				7EDC0CCA25E4AB5900691BED /* HYC */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -451,6 +464,7 @@
 		7E9EAA8225D264EB008308FF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7EDC0CC625E4A90300691BED /* guide */,
 				7E9EAA9425D26A46008308FF /* iconfont.ttf */,
 				7E92057F25B9807F0074A056 /* Main.storyboard */,
 				7E92058225B980830074A056 /* Assets.xcassets */,
@@ -458,6 +472,7 @@
 				7E92058725B980830074A056 /* Info.plist */,
 				7E92058825B980830074A056 /* main.m */,
 				7E9EAA8F25D269E0008308FF /* Images.xcassets */,
+				7EDC0CB325E49E2B00691BED /* test.html */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -465,6 +480,10 @@
 		7E9EAAC825D390A4008308FF /* WMYLINK */ = {
 			isa = PBXGroup;
 			children = (
+				7E9EAAA525D27C51008308FF /* CustomCollectionViewCell.h */,
+				7E9EAAA625D27C51008308FF /* CustomCollectionViewCell.m */,
+				7E9EAAAB25D285E5008308FF /* CustomCollectionReusableView.h */,
+				7E9EAAAC25D285E5008308FF /* CustomCollectionReusableView.m */,
 				7EDC0C3625DDFDB600691BED /* KeyboardAboveView.h */,
 				7EDC0C3525DDFDB600691BED /* KeyboardAboveView.m */,
 				7EDC0C2C25DDFC8400691BED /* LiveStreamViewController.h */,
@@ -494,19 +513,28 @@
 			children = (
 				7EDC0C9925E39C0900691BED /* AudioViewController.h */,
 				7EDC0C9A25E39C0900691BED /* AudioViewController.m */,
+				7EDC0C9F25E4900E00691BED /* WebViewController.h */,
+				7EDC0CA025E4900E00691BED /* WebViewController.m */,
 			);
 			path = WMYCLOUD;
 			sourceTree = "<group>";
 		};
-		7EDC0C7D25DF5DAA00691BED /* View */ = {
+		7EDC0CC625E4A90300691BED /* guide */ = {
 			isa = PBXGroup;
 			children = (
-				7E9EAAA525D27C51008308FF /* CustomCollectionViewCell.h */,
-				7E9EAAA625D27C51008308FF /* CustomCollectionViewCell.m */,
-				7E9EAAAB25D285E5008308FF /* CustomCollectionReusableView.h */,
-				7E9EAAAC25D285E5008308FF /* CustomCollectionReusableView.m */,
+				7EDC0CBC25E4A8F900691BED /* guide_01.jpg */,
+				7EDC0CBE25E4A8FA00691BED /* guide_02.jpg */,
+				7EDC0CBD25E4A8FA00691BED /* guide_03.jpg */,
+				7EDC0CBB25E4A8F900691BED /* guide_04.jpg */,
 			);
-			path = View;
+			path = guide;
+			sourceTree = "<group>";
+		};
+		7EDC0CCA25E4AB5900691BED /* HYC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HYC;
 			sourceTree = "<group>";
 		};
 		82B60165061B325EB599EED2 /* Pods */ = {
@@ -630,9 +658,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EDC0CC025E4A8FA00691BED /* guide_01.jpg in Resources */,
 				7E92058625B980830074A056 /* LaunchScreen.storyboard in Resources */,
 				7E9EAA9025D269E0008308FF /* Images.xcassets in Resources */,
+				7EDC0CB425E49E2B00691BED /* test.html in Resources */,
 				7E92058325B980830074A056 /* Assets.xcassets in Resources */,
+				7EDC0CC125E4A8FA00691BED /* guide_03.jpg in Resources */,
+				7EDC0CBF25E4A8FA00691BED /* guide_04.jpg in Resources */,
+				7EDC0CC225E4A8FA00691BED /* guide_02.jpg in Resources */,
 				7E9EAA9525D26A46008308FF /* iconfont.ttf in Resources */,
 				7E92058125B9807F0074A056 /* Main.storyboard in Resources */,
 			);
@@ -781,6 +814,7 @@
 				7E9EAAAD25D285E5008308FF /* CustomCollectionReusableView.m in Sources */,
 				7E0F828C25D11FE70002F83E /* OpenInstallManager.m in Sources */,
 				7EDC0C8925E394B000691BED /* AudioRecordManager.m in Sources */,
+				7EDC0CA125E4900F00691BED /* WebViewController.m in Sources */,
 				7E0F827E25D11FE70002F83E /* CustomVideoPlayerViewController.m in Sources */,
 				7EDC0C9B25E39C0900691BED /* AudioViewController.m in Sources */,
 				7E0F827F25D11FE70002F83E /* CustomImagePreviewViewController.m in Sources */,
