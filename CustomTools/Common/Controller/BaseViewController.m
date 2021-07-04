@@ -133,6 +133,7 @@ const NSInteger itemButtonTag = 10000;
 
 - (void)setNormalNavigationBar {
     self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"picker_bg1"] forBarMetrics:UIBarMetricsDefault];
 }
 

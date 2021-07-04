@@ -13,6 +13,7 @@
 #import "LivePlayerViewController.h"
 #import "AudioViewController.h"
 #import "CustomGuideView.h"
+#import "CustomScanViewController.h"
 
 @interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (strong, nonatomic) UICollectionView *mainCollectionView;
@@ -51,6 +52,16 @@
     [self setupValues];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self setClearNavigationBar];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self setNormalNavigationBar];
+}
+
 - (void)setupUI {
     self.navigationItem.title = @"CustomTools ";
     [self.view addSubview:self.mainCollectionView];
@@ -68,7 +79,8 @@
         @"WMYCLOUD": @[
                 @"录音，音频格式转换，上传到服务器",
                 @"WKWebView与原生页面交互",
-                @"引导页，滑动切换引导页，点击立即体验进入App"
+                @"引导页，滑动切换引导页，点击立即体验进入App",
+                @"扫一扫",
             ],
         @"BTCARD": @[
             ],
@@ -78,64 +90,6 @@
             ],
     };
 }
-
-#pragma mark - private
-
-- (void)selectImage {
-    [self showImagePickerType:CustomImagePickerTypeLiveCoverImage andPickImage:^(UIImage * _Nonnull image, NSString * _Nonnull url) {
-            
-    }];
-}
-
-- (void)selectVideo {
-    [self showImagePickerAndPickVideo:^(UIImage * _Nonnull cover, NSString * _Nonnull coverPath, NSString * _Nonnull videoPath, NSTimeInterval duration) {
-        
-    } cancel:^{
-
-    }];
-}
-
-- (void)startLive {
-    LiveModel *model = [[LiveModel alloc] init];
-    model.ID = 1;
-    model.accountId = 111;
-    model.pushUrl = @"rtmp://anchor.kmelearning.com/app/1356861531207602176?auth_key=1612357572-0-0-178e4bd5bdef179e33e499b602862492";
-    LiveStreamViewController *controller = (LiveStreamViewController *)ViewControllerInStoryboard(NSStringFromClass([LiveStreamViewController class]));
-    controller.liveModel = model;
-    [self presentViewController:controller animated:YES completion:NULL];
-}
-
-- (void)watchLive {
-    LivePlayerViewController *player = [[LivePlayerViewController alloc] init];
-    [self presentViewController:player animated:YES completion:NULL];
-}
-
-- (void)recordAudio {
-    [self performSegueWithIdentifier:@"toAudioRecord" sender:self.view];
-}
-
-- (void)handleJavascript {
-    [self performSegueWithIdentifier:@"toWebView" sender:self.view];
-}
-
-- (void)setupGuideView {
-    NSString *appVersion = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    if (![userDefaults boolForKey:appVersion]) {
-        NSString *path1 = @"guide_01.jpg";
-        NSString *path2 = @"guide_02.jpg";
-        NSString *path3 = @"guide_03.jpg";
-        NSString *path4 = @"guide_04.jpg";
-        
-        CustomGuideView *guideView = [[CustomGuideView alloc] initWithFrame:CGRectMake(0, 0, COMMON_SCREEN_WIDTH, COMMON_SCREEN_HEIGHT)];
-        [guideView setupWithImages:@[path1, path2, path3, path4]];
-        [[UIApplication sharedApplication].windows.firstObject addSubview:guideView];
-        //使用时去掉下面两行注释
-//        [userDefaults setBool:YES forKey:appVersion];
-//        [userDefaults synchronize];
-    }
-}
-
 
 #pragma mark - UICollectionViewDelegate & UICollectionViewDataSource
 
@@ -214,10 +168,79 @@
         } else if (indexPath.item == 1) {
             [self handleJavascript];
         } else if (indexPath.item == 2) {
-            [self setupGuideView];
+            [self showGuideView];
+        } else if (indexPath.item == 3) {
+            [self toScanView];
         }
     }
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
 }
+
+#pragma mark - private
+
+- (void)selectImage {
+    [self showImagePickerType:CustomImagePickerTypeLiveCoverImage andPickImage:^(UIImage * _Nonnull image, NSString * _Nonnull url) {
+            
+    }];
+}
+
+- (void)selectVideo {
+    [self showImagePickerAndPickVideo:^(UIImage * _Nonnull cover, NSString * _Nonnull coverPath, NSString * _Nonnull videoPath, NSTimeInterval duration) {
+        
+    } cancel:^{
+
+    }];
+}
+
+- (void)startLive {
+    LiveModel *model = [[LiveModel alloc] init];
+    model.ID = 1;
+    model.accountId = 111;
+    model.pushUrl = @"rtmp://anchor.kmelearning.com/app/1356861531207602176?auth_key=1612357572-0-0-178e4bd5bdef179e33e499b602862492";
+    LiveStreamViewController *controller = (LiveStreamViewController *)ViewControllerInStoryboard(NSStringFromClass([LiveStreamViewController class]));
+    controller.liveModel = model;
+    [self presentViewController:controller animated:YES completion:NULL];
+}
+
+- (void)watchLive {
+    LivePlayerViewController *player = [[LivePlayerViewController alloc] init];
+    [self presentViewController:player animated:YES completion:NULL];
+}
+
+- (void)recordAudio {
+    [self performSegueWithIdentifier:@"toAudioRecord" sender:self.view];
+}
+
+- (void)handleJavascript {
+    [self performSegueWithIdentifier:@"toWebView" sender:self.view];
+}
+
+- (void)showGuideView {
+    NSString *appVersion = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if (![userDefaults boolForKey:appVersion]) {
+        NSString *path1 = @"guide_01.jpg";
+        NSString *path2 = @"guide_02.jpg";
+        NSString *path3 = @"guide_03.jpg";
+        NSString *path4 = @"guide_04.jpg";
+        
+        CustomGuideView *guideView = [[CustomGuideView alloc] initWithFrame:CGRectMake(0, 0, COMMON_SCREEN_WIDTH, COMMON_SCREEN_HEIGHT)];
+        [guideView setupWithImages:@[path1, path2, path3, path4]];
+        [[UIApplication sharedApplication].windows.firstObject addSubview:guideView];
+        //使用时去掉下面两行注释
+//        [userDefaults setBool:YES forKey:appVersion];
+//        [userDefaults synchronize];
+    }
+}
+
+- (void)toScanView {
+    CustomScanViewController *scanController = [[CustomScanViewController alloc] init];
+    scanController.scanResultBlock = ^(NSString * _Nonnull resultStr) {
+        NSLog(@"resultStr=%@", resultStr);
+    };
+    [self.navigationController pushViewController:scanController animated:YES];
+}
+
+
 
 @end

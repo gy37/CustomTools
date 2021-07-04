@@ -9,7 +9,7 @@
 #import "WebViewController.h"
 #import <WebKit/WebKit.h>
 
-@interface WebViewController ()<WKScriptMessageHandler>
+@interface WebViewController ()<WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate>
 @property (strong, nonatomic) WKWebView *contentWebView;
 
 @end
@@ -36,6 +36,8 @@
 }
 
 - (void)setupUI {
+    self.contentWebView.UIDelegate = self;
+    self.contentWebView.navigationDelegate = self;
     [self.view addSubview:self.contentWebView];
     
     NSString *htmlPath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"html"];
@@ -57,12 +59,37 @@
 }
 
 
-
-
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
     NSLog(@"didReceiveScriptMessage: %@---%@", message.name, message.body);
     if ([message.name isEqualToString:@"changeUIViewColor"]) {
         self.view.backgroundColor = [UIColor redColor];
     }
+}
+
+#pragma mark - WKNavigationDelegate
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
+    NSLog(@"decidePolicyForNavigationResponse");
+
+    decisionHandler(WKNavigationResponsePolicyAllow);
+}
+
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
+    NSLog(@"didStartProvisionalNavigation");
+    
+}
+
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    NSLog(@"didFinishNavigation");
+    
+}
+
+#pragma mark - WKUIDelegate
+
+- (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures {
+    if (navigationAction.request.URL) {
+        [self.contentWebView loadRequest:[NSURLRequest requestWithURL:navigationAction.request.URL]];
+    }
+    return nil;
 }
 @end

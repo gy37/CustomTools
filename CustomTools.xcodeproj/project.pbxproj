@@ -68,6 +68,7 @@
 		7EDC0CC025E4A8FA00691BED /* guide_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EDC0CBC25E4A8F900691BED /* guide_01.jpg */; };
 		7EDC0CC125E4A8FA00691BED /* guide_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EDC0CBD25E4A8FA00691BED /* guide_03.jpg */; };
 		7EDC0CC225E4A8FA00691BED /* guide_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7EDC0CBE25E4A8FA00691BED /* guide_02.jpg */; };
+		D891C2E22691D81B0081602D /* CustomScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D891C2E12691D81B0081602D /* CustomScanViewController.m */; };
 		EB88581688BBDB2E9FEADA06 /* Pods_CustomTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C333F621EA88C6789AB4DE28 /* Pods_CustomTools.framework */; };
 /* End PBXBuildFile section */
 
@@ -210,6 +211,8 @@
 		7EDC0CBE25E4A8FA00691BED /* guide_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_02.jpg; sourceTree = "<group>"; };
 		B98FAE62A98C4A8B8C639147 /* Pods-CustomTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTools.release.xcconfig"; path = "Target Support Files/Pods-CustomTools/Pods-CustomTools.release.xcconfig"; sourceTree = "<group>"; };
 		C333F621EA88C6789AB4DE28 /* Pods_CustomTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D891C2E02691D81B0081602D /* CustomScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomScanViewController.h; sourceTree = "<group>"; };
+		D891C2E12691D81B0081602D /* CustomScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomScanViewController.m; sourceTree = "<group>"; };
 		DE8C8321230F7BDF3B1C0692 /* Pods-CustomToolsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomToolsTests.debug.xcconfig"; path = "Target Support Files/Pods-CustomToolsTests/Pods-CustomToolsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EBFD420297CF584E59658E2B /* Pods-CustomTools-CustomToolsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTools-CustomToolsUITests.release.xcconfig"; path = "Target Support Files/Pods-CustomTools-CustomToolsUITests/Pods-CustomTools-CustomToolsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F576CDFE2E7639C9D282EB84 /* Pods-CustomTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomTools.debug.xcconfig"; path = "Target Support Files/Pods-CustomTools/Pods-CustomTools.debug.xcconfig"; sourceTree = "<group>"; };
@@ -268,6 +271,8 @@
 		7E0F823B25D11FE70002F83E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D891C2E02691D81B0081602D /* CustomScanViewController.h */,
+				D891C2E12691D81B0081602D /* CustomScanViewController.m */,
 				7E0F824425D11FE70002F83E /* BaseViewController.h */,
 				7E0F823E25D11FE70002F83E /* BaseViewController.m */,
 				7E0F824225D11FE70002F83E /* CustomCameraViewController.h */,
@@ -810,6 +815,7 @@
 				7E0F828325D11FE70002F83E /* CustomSheetContentView.m in Sources */,
 				7E0F828B25D11FE70002F83E /* NetWorkTool.m in Sources */,
 				7E0F827D25D11FE70002F83E /* BaseViewController.m in Sources */,
+				D891C2E22691D81B0081602D /* CustomScanViewController.m in Sources */,
 				7E0F828125D11FE70002F83E /* CustomGuideView.m in Sources */,
 				7E9EAAAD25D285E5008308FF /* CustomCollectionReusableView.m in Sources */,
 				7E0F828C25D11FE70002F83E /* OpenInstallManager.m in Sources */,
@@ -1014,7 +1020,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PH3KSJ6RHD;
+				DEVELOPMENT_TEAM = APPNUV3GRD;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = $SRCROOT/CustomTools/Macro/PrefixHeader.pch;
@@ -1040,7 +1046,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PH3KSJ6RHD;
+				DEVELOPMENT_TEAM = APPNUV3GRD;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = $SRCROOT/CustomTools/Macro/PrefixHeader.pch;

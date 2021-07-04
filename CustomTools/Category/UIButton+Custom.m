@@ -68,12 +68,13 @@ const CGFloat buttonIconfontSize = 16;
     [self setTitleColor:color forState:UIControlStateNormal];
     self.backgroundColor = [UIColor clearColor];
     if (icons.count >= 1 && icons[0] && icons[0].length > 0) {
-        [self setImage:[UIImage iconWithFontSize:iconSize text:icons[0] color:color] forState:UIControlStateNormal];
-        [self setImage:[UIImage iconWithFontSize:iconSize text:icons[0] color:color] forState:UIControlStateNormal | UIControlStateHighlighted];
+        
+        [self setImage:[icons[0] containsString:@"U0000"]?[UIImage iconWithFontSize:iconSize text:icons[0] color:color]:[UIImage imageNamed:icons[0]] forState:UIControlStateNormal];
+        [self setImage:[icons[0] containsString:@"U0000"]?[UIImage iconWithFontSize:iconSize text:icons[0] color:color]:[UIImage imageNamed:icons[0]] forState:UIControlStateNormal | UIControlStateHighlighted];
     }
     if (icons.count >= 2 && icons[1] && icons[1].length > 0) {
-        [self setImage:[UIImage iconWithFontSize:iconSize text:icons[1] color:color] forState:UIControlStateSelected];
-        [self setImage:[UIImage iconWithFontSize:iconSize text:icons[1] color:color] forState:UIControlStateSelected | UIControlStateHighlighted];
+        [self setImage:[icons[1] containsString:@"U0000"]?[UIImage iconWithFontSize:iconSize text:icons[1] color:color]:[UIImage imageNamed:icons[1]] forState:UIControlStateSelected];
+        [self setImage:[icons[1] containsString:@"U0000"]?[UIImage iconWithFontSize:iconSize text:icons[1] color:color]:[UIImage imageNamed:icons[1]] forState:UIControlStateSelected | UIControlStateHighlighted];
     }
     if (titleSize > 0 && iconSize > 0) {
         self.imageEdgeInsets = UIEdgeInsetsMake(0, -2, 0, 2);

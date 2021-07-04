@@ -11,9 +11,11 @@
 @implementation UITextField (Custom)
 
 const int loginTextFieldRightImageViewTag = 1000;
+const NSInteger loginTextFieldRightButtonTag = 1010;
 BOOL isShow = NO;
 NSArray *rightIcons;
 const CGFloat loginTextFieldIconWidth = 24;
+const CGFloat innerSpace = 24;
 
 #pragma mark - method swizzle
 
@@ -32,13 +34,16 @@ const CGFloat loginTextFieldIconWidth = 24;
 
 #pragma mark - setup
 
-- (void)setupTextFieldWithIcon:(NSString *)iconName placeholder:(NSString *)placeholder {
-    [self setupTextFieldWithIcon:iconName placeholder:placeholder rightIcons:nil];
+- (void)setupRightView:(NSArray<NSString *> *)icons {
+    
 }
 
-- (void)setupTextFieldWithIcon:(NSString *)iconName placeholder:(NSString *)placeholder rightIcons:(nullable NSArray<NSString *> *)rightIcons {
+- (void)setupTextFieldWithIcon:(NSString *)iconName placeholder:(NSString *)placeholder rightIcons:(nullable NSArray<NSString *> *)rightIcons isPassword:(BOOL)isPassword {
+    self.text = @"";
+    if (isPassword) self.secureTextEntry = YES;
+    
     //左侧图标
-    UIImageView *leftImageView = [[UIImageView alloc] initWithImage:[UIImage iconWithFontSize:loginTextFieldIconWidth text:iconName color:HALF_WHITE_COLOR]];
+    UIImageView *leftImageView = [[UIImageView alloc] initWithImage:[iconName containsString:@"U0000"]?[UIImage iconWithFontSize:loginTextFieldIconWidth text:iconName color:HALF_WHITE_COLOR]:[UIImage imageNamed:iconName]];
     UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, loginTextFieldIconWidth + COMMON_INNER_SPACE, loginTextFieldIconWidth)];
     [leftView addSubview:leftImageView];
     leftImageView.center = leftView.center;
@@ -53,24 +58,29 @@ const CGFloat loginTextFieldIconWidth = 24;
     CGFloat left = loginTextFieldIconWidth + COMMON_INNER_SPACE;
     [self layoutIfNeeded];//获取布局之后view的frame
     [self addBorder:HALF_WHITE_COLOR position:CustomViewBorderPositionBottom offsets:CustomViewBorderOffsetsMake(0, left) isDashed:NO];
-    
-    if (rightIcons) {
-        [self setupRightView:rightIcons];
+        
+    if (rightIcons && rightIcons.count > 0) {
+        [self setupRightView:rightIcons isPassword:isPassword];
     }
 }
 
-- (void)setupRightView:(NSArray<NSString *> *)icons {
+- (void)setupRightView:(NSArray<NSString *> *)icons isPassword:(BOOL)isPassword {
     rightIcons = icons;
     //右侧图标
-    UIView *rightView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, loginTextFieldIconWidth + COMMON_INNER_SPACE, loginTextFieldIconWidth)];
-    UIImageView *rightImageView = [[UIImageView alloc] initWithImage:[UIImage iconWithFontSize:loginTextFieldIconWidth text:rightIcons[0] color:HALF_WHITE_COLOR]];
+    UIView *rightView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, loginTextFieldIconWidth + innerSpace, loginTextFieldIconWidth)];
+    UIImageView *rightImageView = [[UIImageView alloc] initWithImage:[rightIcons[0] containsString:@"U0000"]?[UIImage iconWithFontSize:loginTextFieldIconWidth text:rightIcons[0] color:HALF_WHITE_COLOR]:[UIImage imageNamed:rightIcons[0]]];
     rightImageView.tag = loginTextFieldRightImageViewTag;
     rightImageView.center = rightView.center;
     [rightView addSubview:rightImageView];
     self.rightView = rightView;
     self.rightViewMode = UITextFieldViewModeAlways;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPassword:)];
-    [self.rightView addGestureRecognizer:tap];
+    
+    if (isPassword) {
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPassword:)];
+        [self.rightView addGestureRecognizer:tap];
+    } else {
+        self.rightView.userInteractionEnabled = NO;
+    }
 }
 
 - (void)showPassword:(UITapGestureRecognizer *)tap {
@@ -80,4 +90,51 @@ const CGFloat loginTextFieldIconWidth = 24;
     self.secureTextEntry = !isShow;
 }
 
+- (void)setupTextFieldWithLeftString:(NSString *)leftString placeholder:(NSString *)placeholder rightString:(NSString *)rightString {
+    self.text = @"";
+    self.secureTextEntry = NO;
+
+    //左侧空白
+    CGRect leftFrame = CGRectMake(0, 0, loginTextFieldIconWidth, loginTextFieldIconWidth);
+    UIView *leftView = [[UIView alloc] initWithFrame:leftFrame];
+    self.leftView = leftView;
+    self.leftViewMode = UITextFieldViewModeAlways;
+    if (leftString.length) {
+        leftFrame.size.width = leftFrame.size.width + innerSpace + 30;
+        leftView.frame = leftFrame;
+        //左侧按钮
+        UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [leftButton setBackgroundColor:self.backgroundColor];
+        [leftButton setTitleColor:UIColorFromRGB(0x4285f4) forState:UIControlStateNormal];
+        [leftButton setTitle:leftString forState:UIControlStateNormal];
+        leftButton.titleLabel.font = [UIFont systemFontOfSize:16];
+        [leftView addSubview:leftButton];
+        leftButton.size = CGSizeMake(30, 20);
+        leftButton.center = leftView.center;
+    }
+
+    //placeholder
+    NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:placeholder attributes:@{ NSForegroundColorAttributeName:UIColorFromRGB(0xc5c5c5) }];
+    self.attributedPlaceholder = attrString;
+    
+    //右侧空白
+    CGRect rightFrame = CGRectMake(0, 0, loginTextFieldIconWidth, loginTextFieldIconWidth);
+    UIView *rightView = [[UIView alloc] initWithFrame:rightFrame];
+    self.rightView = rightView;
+    self.rightViewMode = UITextFieldViewModeAlways;
+    if (rightString.length) {
+        rightFrame.size.width = rightFrame.size.width + 8 + 120;
+        rightView.frame = rightFrame;
+        //右侧按钮
+        UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [rightButton setBackgroundColor:self.backgroundColor];
+        [rightButton setTitleColor:UIColorFromRGB(0x4285f4) forState:UIControlStateNormal];
+        [rightButton setTitle:rightString forState:UIControlStateNormal];
+        rightButton.titleLabel.font = [UIFont systemFontOfSize:14];
+        rightButton.tag = loginTextFieldRightButtonTag;
+        [rightView addSubview:rightButton];
+        rightButton.size = CGSizeMake(120, 20);
+        rightButton.center = rightView.center;
+    }
+}
 @end

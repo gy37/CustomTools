@@ -26,7 +26,7 @@
     searchTextField.layer.masksToBounds = YES;
     searchTextField.textColor = textColor;
     
-    UIImageView *leftImageView = [[UIImageView alloc] initWithImage:[UIImage iconWithFontSize:18 text:@"\U0000e64f" color:UIColorFromRGB(0x999999)]];
+    UIImageView *leftImageView = [[UIImageView alloc] initWithImage:[UIImage iconWithFontSize:18 text:@"\U0000e64f" color:UIColorFromRGB(0x999999)]];//[UIImage imageNamed:];
     CGFloat width = IS_NOTCH_SCREEN ? 24 + COMMON_INNER_SPACE : 18 + COMMON_INNER_SPACE;
     UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, 18)];
     [leftView addSubview:leftImageView];
