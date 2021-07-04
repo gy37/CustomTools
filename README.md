@@ -16,3 +16,4 @@ Custom tools from my projects.
 1. 录音、音频格式转换、播放录音文件
 2. WKWebView和原生交互
 3. 引导页
+4. 扫一扫
