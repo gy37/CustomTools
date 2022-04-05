@@ -9,7 +9,7 @@
 #import "NSString+Custom.h"
 #import <CommonCrypto/CommonCrypto.h>
 #import "StorageTool.h"
-#import <GMObjC.h>
+//#import <GMObjC.h>
 
 @implementation NSString (Custom)
 NSString *const HomeCancelLink = @"CancelApply://";
@@ -181,11 +181,12 @@ NSString *const HomeApplyLink = @"Apply://";
 }
 
 - (NSString *)encryptStringWithSalt:(NSString *)salt {
-    NSString *newString = [NSString stringWithFormat:@"%@%@", self, salt];
-    NSString *security = [GMSm2Utils encryptText:newString publicKey:PUBLIC_KEY];
-    NSString *decode = [GMSm2Utils asn1DecodeToC1C3C2:security];
-    NSString *encrypt = [NSString stringWithFormat:@"%@%@", @"04", decode];
-    return encrypt;
+//    NSString *newString = [NSString stringWithFormat:@"%@%@", self, salt];
+//    NSString *security = [GMSm2Utils encryptText:newString publicKey:PUBLIC_KEY];
+//    NSString *decode = [GMSm2Utils asn1DecodeToC1C3C2:security];
+//    NSString *encrypt = [NSString stringWithFormat:@"%@%@", @"04", decode];
+//    return encrypt;
+    return @"";
 }
 
 + (NSString *)generateParameterString:(NSDictionary *)params {

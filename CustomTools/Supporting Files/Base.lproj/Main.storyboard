@@ -23,6 +23,7 @@
                     <connections>
                         <segue destination="TQX-ce-AlH" kind="show" identifier="toAudioRecord" id="1hI-Tb-hdW"/>
                         <segue destination="CzB-I9-kbN" kind="show" identifier="toWebView" id="59u-vX-itx"/>
+                        <segue destination="omJ-Iy-Rbe" kind="show" identifier="toSecureTextField" id="xjK-YN-6ib"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -578,7 +579,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btd-Vd-AFD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1737.68115942029" y="60.9375"/>
+            <point key="canvasLocation" x="1781" y="61"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W1S-L6-Mic">
@@ -655,6 +656,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1S-co-5IN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2479.7101449275365" y="60.9375"/>
+        </scene>
+        <!--Text Field View Controller-->
+        <scene sceneID="Mes-WE-pBe">
+            <objects>
+                <viewController id="omJ-Iy-Rbe" customClass="TextFieldViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tQ2-XY-1v6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="点击弹出安全键盘" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ssr-S1-lHG" customClass="SecureTextField">
+                                <rect key="frame" x="20.5" y="148" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mvQ-N4-ALj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ssr-S1-lHG" firstAttribute="width" secondItem="tQ2-XY-1v6" secondAttribute="width" multiplier="0.9" id="EMJ-gY-E7h"/>
+                            <constraint firstItem="Ssr-S1-lHG" firstAttribute="top" secondItem="mvQ-N4-ALj" secondAttribute="top" constant="60" id="gNg-4y-TLz"/>
+                            <constraint firstItem="Ssr-S1-lHG" firstAttribute="centerX" secondItem="mvQ-N4-ALj" secondAttribute="centerX" id="qKD-R7-BzL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8v4-3J-Vph"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LsL-A0-kZf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3209" y="61"/>
         </scene>
     </scenes>
     <resources>

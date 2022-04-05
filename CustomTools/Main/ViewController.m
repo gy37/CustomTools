@@ -81,6 +81,7 @@
                 @"WKWebView与原生页面交互",
                 @"引导页，滑动切换引导页，点击立即体验进入App",
                 @"扫一扫",
+                @"安全键盘"
             ],
         @"BTCARD": @[
             ],
@@ -171,6 +172,8 @@
             [self showGuideView];
         } else if (indexPath.item == 3) {
             [self toScanView];
+        } else if (indexPath.item == 4) {
+            [self toSecureTextField];
         }
     }
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
@@ -241,6 +244,9 @@
     [self.navigationController pushViewController:scanController animated:YES];
 }
 
+- (void)toSecureTextField {
+    [self performSegueWithIdentifier:@"toSecureTextField" sender:self.view];
+}
 
 
 @end
