@@ -13,7 +13,8 @@ Custom tools from my projects.
 
 
 ### WMYCLOUD
-1. 录音、音频格式转换、播放录音文件
+1. 录音、音频格式转换、播放录音文件---AVAudioRecorder、lame、AVAudioPlayer
 2. WKWebView和原生交互
 3. 引导页
 4. 扫一扫
+5. 安全键盘
